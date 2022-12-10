@@ -1,3 +1,173 @@
 * {
-    background-color: blue;
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+
+/* header */
+
+header {
+    display: flex;
+    background: whitesmoke;
+    margin-bottom: 10px;
+    padding-top: 10px;
+}
+
+div.logo {
+    text-align: center;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.imagen-logo {
+    width: 100px;
+    height: 100px;
+}
+
+.top-navbar {
+    display: none;
+}
+
+
+.search-bar form { 
+    background: whitesmoke;
+    display: inline;
+    align-items: center;
+    box-sizing: border-box;
+    border-radius: 60px;
+    padding: 5px;
+    border: solid 2px #FFF;
+    margin: auto;
+}
+
+
+
+
+ .search-bar input {
+    
+    background: whitesmoke;
+    border: 0;
+    outline: none;
+
+}
+
+.search-bar button {
+    border: 0;
+    border-radius: 50%;
+    background: whitesmoke;
+
+}
+
+.search-bar button i{
+    border: 0;
+    border-radius: 50%;
+    background: whitesmoke;
+
+}
+
+div.burger-menu {
+    text-align: right;
+    margin: auto;
+}
+
+div.burger-menu i {
+    background-color: #0044AA;
+    border-radius: 5px;
+    color: #FFF;
+    font-size: 20px;
+    height: 40px;
+    margin: 10px 0px 20px 0px;
+    padding: 10px;
+    width: 40px;
+}
+
+/* footer */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background: blue;
+    margin-top: 20px;
+}
+
+footer div img {
+    width: 50px;
+    height: 50px;
+    flex: 10%;
+    margin: 10px;
+    text-align: center;
+
+}
+
+.elemento-footer {
+    flex: 33%;
+    margin: 10px;
+    text-align: center;
+    color: white;
+}
+
+@media (min-width: 420px) {
+
+    /* header */
+
+    header {
+        display: block;
+    }
+
+    .top-navbar {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .top-navbar ul li {
+        margin: 5px;
+        font-size: 18px;
+    }
+
+     a{
+        text-decoration: none;
+        color: black;
+    }
+
+    .burger-menu {
+        display: none;
+    }
+
+    .search-bar input { 
+        font-size: 20px; 
+    }
+
+    div.burger-menu i {
+        font-size: 20px;
+    }
+
+    /* footer */
+
+    footer {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+}
+
+@media (min-widht: 761px) {
+
 }
