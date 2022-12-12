@@ -1,0 +1,100 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+ }
+
+ header {
+    display: flex;
+    background: whitesmoke;
+    margin-bottom: 10px;
+    padding-top: 10px;
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.imagen-logo {
+    width: 100px;
+    height: 100px;
+}
+
+.top-navbar {
+    display: none;
+}
+
+
+.search-bar form { 
+    background: whitesmoke;
+    display: inline;
+    align-items: center;
+    box-sizing: border-box;
+    border-radius: 60px;
+    padding: 5px;
+    border: solid 2px #FFF;
+    margin: auto;
+}
+
+main{
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.usuario{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.usuario label{
+    margin-bottom: 5px;
+}
+
+.password{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.password label{
+    margin-bottom: 5px;
+}
+
+
+/* footer */
+footer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background: blue;
+    margin-top: 20px;
+}
+
+footer div img {
+    width: 50px;
+    height: 50px;
+    flex: 10%;
+    margin: 10px;
+    text-align: center;
+
+}
+
+.elemento-footer {
+    flex: 33%;
+    margin: 10px;
+    text-align: center;
+    color: white;
+}
