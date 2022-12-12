@@ -4,13 +4,24 @@
    box-sizing: border-box;
 }
 
+body{
+
+    background-color: #ebebeb;
+}
+
+main{
+    width: 90%;
+    margin: auto;
+}
+
 /* header */
 
 header {
     display: flex;
     background: whitesmoke;
-    margin-bottom: 10px;
     padding-top: 10px;
+    width: 90%;
+    margin: auto;
 }
 
 div.logo {
@@ -83,6 +94,116 @@ div.burger-menu i {
     width: 40px;
 }
 
+/* main */
+
+div.banner {
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+
+div.banner img{
+    width: 100%;
+    box-sizing: border-box;
+}
+
+section.colecciones h3 {
+    text-align: left;
+}
+
+.imagenes-col {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+
+.colecciones h3 {
+    width: 100%;
+    text-align: center;
+    margin: 15px 0;
+}
+
+section.colecciones div img {
+    width: 80%;
+    height: 150px;
+}
+
+/* productos destacados */
+
+section.productos-destacados h3 {
+    margin: 10px 0;
+}
+
+
+.price{
+    font-size: 18px;
+}
+
+.discount,
+.description{
+    font-size: 16px;
+    font-weight: normal;
+}
+
+h3,
+.description{
+    color: #666;
+}
+
+.description{
+    display: none;
+    margin-top: 20px;
+}
+
+section.banner img{
+    width: 100%;
+}
+
+main section article{
+    background-color: #fff;    
+    margin: 10px 0px;
+}
+
+main section article img{
+    width: 100%;
+}
+
+main section article i,
+.discount{
+    color: #39b54a;
+}
+
+.main-article {
+    position: relative;
+}
+
+main section article i{
+        text-align: center;
+        display: block;
+        font-size: 15px;
+        padding: 5px;
+        width: 30px;
+        height: 30px;
+        border: 1px solid #39b54a;
+        background-color: #FFF;
+        border-radius: 50%;
+        position: absolute;
+        right: 20px;
+        top: -15px;
+        box-sizing: border-box;
+        margin: auto;
+        }
+
+        article div.main-article{
+            width: 100%;
+            border-top: 1px solid #ebebeb;
+            padding: 15px;
+        }
+
+
 /* footer */
 
 footer {
@@ -93,6 +214,8 @@ footer {
     align-items: center;
     background: blue;
     margin-top: 20px;
+    width: 90%;
+    margin: auto;
 }
 
 footer div img {
@@ -154,6 +277,49 @@ footer div img {
     div.burger-menu i {
         font-size: 20px;
     }
+
+    /* colecciones */
+
+    section.colecciones {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap ;
+    }
+
+    div.imagenes-col {
+        flex: 40%;
+    }
+
+    /* productos destacados */
+
+    main section article {
+        background-color: #fff;
+         margin: 10px 10px; 
+    }
+
+div.productos-destacados {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: space-around;
+     align-items: center;
+     flex-direction: row;
+}
+
+article {
+    flex: 35%;
+    justify-content: space-around;
+}
+
+    main section article .description{
+        display: block;
+    }
+
+
+    main section article{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+
+
 
     /* footer */
 
