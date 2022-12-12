@@ -40,6 +40,37 @@
     margin: auto;
 }
 
+main{
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.usuario{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.usuario label{
+    margin-bottom: 5px;
+}
+
+.password{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.password label{
+    margin-bottom: 5px;
+}
+
 
 /* footer */
 footer {
