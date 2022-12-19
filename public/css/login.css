@@ -13,7 +13,6 @@
 }
 
 body{
-
     background-color: #FFFFFF;
 }
 
@@ -115,6 +114,14 @@ main{
     margin-bottom: 5px;
 }
 
+.usuario input{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: solid 1px #242F40;
+    border-radius: 8px;
+}
+
 .password{
     display: flex;
     flex-direction: column;
@@ -126,6 +133,14 @@ main{
 
 .password label{
     margin-bottom: 5px;
+}
+
+.password input{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: solid 1px #242F40;
+    border-radius: 8px;
 }
 
 
