@@ -266,6 +266,26 @@ footer div img {
         font-size: 20px;
     }
 
+    .usuario{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .usuario input{
+        width: 50%;
+        height: 30px;
+    }
+
+    .password{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .password input{
+        width: 50%;
+        height: 30px;
+    }
+
     footer {
         display: flex;
         flex-direction: row;
