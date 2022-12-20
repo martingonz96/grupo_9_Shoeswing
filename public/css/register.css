@@ -96,6 +96,175 @@ div.burger-menu i {
     width: 40px;
 }
 
+/* Main */
+main{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nombre{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.nombre label{
+    text-align: center;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.nombre input{
+    width: 100%;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: solid 1px #242F40;
+    border-radius: 8px;
+}
+
+.apellido{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.apellido label{
+    text-align: center;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.apellido input{
+    width: 100%;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: solid 1px #242F40;
+    border-radius: 8px;
+}
+
+.email{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.email label{
+    text-align: center;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.email input{
+    width: 100%;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: solid 1px #242F40;
+    border-radius: 8px;
+}
+
+.fechaDeNacimiento{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.fechaDeNacimiento label{
+    text-align: center;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.fechaDeNacimiento input{
+    width: 100%;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: solid 1px #242F40;
+    border-radius: 8px;
+}
+
+.domicilio{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.domicilio label{
+    text-align: center;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.domicilio input{
+    width: 100%;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: solid 1px #242F40;
+    border-radius: 8px;
+}
+
+.password{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.password label{
+    text-align: center;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.password input{
+    width: 100%;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: solid 1px #242F40;
+    border-radius: 8px;
+}
+
+.confirmPassword{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.confirmPassword label{
+    text-align: center;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.confirmPassword input{
+    width: 100%;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: solid 1px #242F40;
+    border-radius: 8px;
+}
+
 /* footer */
 footer {
     display: flex;
@@ -168,6 +337,61 @@ footer div img {
         font-size: 20px;
     }
 
+    .nombre{
+        align-items: center;
+    }
+
+    .nombre input{
+        width: 70%;
+    }
+
+    .apellido{
+        align-items: center;
+    }
+
+    .apellido input{
+        width: 70%;
+    }
+
+    .email{
+        align-items: center;
+    }
+
+    .email input{
+        width: 70%;
+    }
+
+    .fechaDeNacimiento{
+        align-items: center;
+    }
+
+    .fechaDeNacimiento input{
+        width: 70%;
+    }
+
+    .domicilio{
+        align-items: center;
+    }
+
+    .domicilio input{
+        width: 70%;
+    }
+
+    .password{
+        align-items: center;
+    }
+
+    .password input{
+        width: 70%;
+    }
+
+    .confirmPassword{
+        align-items: center;
+    }
+
+    .confirmPassword input{
+        width: 70%;
+    }
 }
 
 @media (min-width: 670px) {
