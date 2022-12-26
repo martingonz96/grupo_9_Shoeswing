@@ -299,14 +299,79 @@ h3.titulo-detalle {
     text-decoration-color: black;
 }
 
+div.description-black {
+    color: black;
+}
+
 .detail-img {
-    max-width: 40%;
+    max-width: 50%;
+    margin: 0 25px 10px 0;
 }
 
 .detalles-producto {
     padding: 20px;
 }
 
+.eleccion-cantidad {
+    margin: 10px 0px;
+}
+
+.foto-y-precio {
+    display: flex;
+    align-items: flex-start;
+}
+
+.talles {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.texto-talles {
+    margin: 5px 0px;
+}
+
+.talles li {
+    list-style-type: none;
+    margin: 5px;
+    padding: 2px;
+    background-color: #fff;
+    width: 30px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.precio-detallado {
+    width: 50%;
+}
+
+.botones {
+    display: flex;
+    flex-direction: row;
+    align-items: space-between;
+    flex-wrap: wrap;
+}
+
+.boton-comprar {
+    border-radius: 5px;
+    padding: 6.5px;
+    border: 0px;
+    background: #FFC300;
+    transition: all 450ms;
+    color: black;
+    margin: 0 10px 5px 0;
+}
+
+.boton-carrito {
+    border-radius: 5px;
+    padding: 6.5px;
+    border: 2px;
+    border-color: #FFC300;
+    background-color: #FFF;
+    transition: all 450ms;
+    color: black;
+    margin: 0 10px 5px 0;
+}
 
 @media (min-width: 420px) {
 
@@ -418,7 +483,8 @@ h3.titulo-detalle {
         align-items: center;
     }
 
-    div.imagenes-col img {
+    div.imagenes-col img,
+    .detail-img {
         box-shadow: 1px 7px 16px -7px rgba(0,0,0,0.75);
     }
 
