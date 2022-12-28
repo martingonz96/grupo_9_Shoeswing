@@ -266,6 +266,57 @@ main{
     border-radius: 8px;
 }
 
+.buttomRegistrarse{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.myButtonRegister {
+	box-shadow: 0px 10px 14px -7px #276873;
+	background-color:#242F40;
+	border-radius:8px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:18px;
+	font-weight:bold;
+	padding:13px 32px;
+	text-decoration:none;
+}
+.myButtonRegister:hover {
+	background-color: #003566;
+    transition: 0.5s;
+}
+.myButtonRegister:active {
+	position:relative;
+	top:1px;
+}
+
+.myButtonBorrar {
+	box-shadow: 0px 10px 14px -7px #276873;
+	background-color:#791212;
+	border-radius:8px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:18px;
+	font-weight:bold;
+	padding:13px 32px;
+	text-decoration:none;
+}
+.myButtonBorrar:hover {
+	background-color: #003566;
+    transition: 0.5s;
+}
+.myButtonBorrar:active {
+	position:relative;
+	top:1px;
+}
+
 /* footer */
 footer {
     display: flex;
