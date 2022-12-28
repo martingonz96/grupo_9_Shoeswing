@@ -37,6 +37,7 @@ header {
 .imagen-logo {
     width: 100px;
     height: 100px;
+    margin-right: 10px;
 }
 
 .top-navbar {
@@ -272,7 +273,7 @@ footer {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    background: #242F40;
+    background: #003566;
     margin-top: 20px;
     margin: auto;
 }

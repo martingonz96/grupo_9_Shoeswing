@@ -34,6 +34,7 @@ header {
 .imagen-logo {
     width: 100px;
     height: 100px;
+    margin-right: 10px;
 }
 
 .top-navbar {
@@ -252,6 +253,83 @@ main section article i{
             color: black;
             margin: 10px 0;
         }
+
+/* Checkout */
+
+.top-bar {
+    background-color: rgba(220, 220, 220, 0.742);
+    padding: 10px;
+}
+
+
+
+.titulo-checkout {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+}
+
+.titulo-checkout h2 {
+    margin-right: 10px;
+}
+
+.producto-carrito, .cantidad-wrapper {
+    display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+        flex-wrap: wrap;
+    
+}
+
+.producto-carrito{
+    margin: 10px;
+    background-color: white;
+    border-radius: 8px;
+}
+
+.contenedor-imagen-producto-carrito {
+    margin: 10px;
+    width: 40%;
+}
+
+.imagen-producto-carrito {
+    width: 100%;
+}
+
+.descripcion-producto {
+    margin: 10px;
+    border-top: solid 0.1rem ;
+    width: 100%;
+}
+
+.cantidad-wrapper { 
+	-webkit-box-align: start;
+	    -ms-flex-align: start;
+	        align-items: flex-start; 
+	-webkit-box-orient: horizontal; 
+	-webkit-box-direction: normal; 
+	    -ms-flex-flow: row wrap; 
+	        flex-flow: row wrap;
+	margin: 1rem 0 0.5rem; }
+
+
+.cantidad-wrapper label {
+    margin-right: 0.5rem;
+}
+
+.cantidad-wrapper select { 
+	width: 50px;
+	margin-right: 1rem; }
+
+
+    .btn-remove { 
+        cursor: pointer;
+        width: 100px;
+        background: #003566; 
+      border-radius: 4px;
+        color: #E5E5E5; }
 
 
 /* footer */
