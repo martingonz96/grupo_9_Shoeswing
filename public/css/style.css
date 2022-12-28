@@ -261,6 +261,11 @@ main section article i{
     padding: 10px;
 }
 
+.top-bar a {
+    text-decoration: none;
+    color: black;
+}
+
 
 
 .titulo-checkout {
@@ -283,7 +288,7 @@ main section article i{
     
 }
 
-.producto-carrito{
+.producto-carrito, .total-compra{
     margin: 10px;
     background-color: white;
     border-radius: 8px;
@@ -329,8 +334,51 @@ main section article i{
         width: 100px;
         background: #003566; 
       border-radius: 4px;
-        color: #E5E5E5; }
+        color: #E5E5E5;
+        border: 2px solid #003566;
+     }
 
+.checkout, .carrito {
+    margin: 0;
+}
+
+
+.total-compra {
+    padding: 10px;
+}
+
+.subtotal, .envio , .total {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 10px 0px;
+}
+
+.total {
+    border-top: 0.1rem solid;
+    margin-top: 20px;
+}
+
+.btn-go-checkout {
+    width: 100%;
+    margin-top: 1rem;
+	height: 40px;
+	background: #003566;
+    font-size: 1rem;
+    border-radius: 8px;
+    color: #FFC300;
+    cursor: pointer; 
+	border: 2px solid #003566;
+    text-transform: uppercase;
+}
+
+.ayuda {
+    text-align: center;
+    font-size: 0.7rem;
+    margin: 10px 0;
+    background: whitesmoke;
+
+}
 
 /* footer */
 
