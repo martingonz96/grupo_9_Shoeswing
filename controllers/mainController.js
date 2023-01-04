@@ -24,7 +24,33 @@ const controller = {
     register:(req,res)=> {
     
         res.sendFile(path.join(__dirname, "../views/register.html"))
-    }
+    },
+
+    nosotros:(req,res)=> {
+    
+        res.sendFile(path.join(__dirname, "../views/nosotros.html"))
+    },
+
+    contacto:(req,res)=> {
+    
+        res.sendFile(path.join(__dirname, "../views/contacto.html"))
+    },
+
+    mediosDePago:(req,res)=> {
+    
+        res.sendFile(path.join(__dirname, "../views/mediosDePago.html"))
+    },
+
+    preguntasFrecuentes:(req,res)=> {
+    
+        res.sendFile(path.join(__dirname, "../views/preguntasFrecuentes.html"))
+    },
+
+    politicasEnvio:(req,res)=> {
+    
+        res.sendFile(path.join(__dirname, "../views/politicasEnvio.html"))
+    },
+
 };
 
 module.exports = controller;

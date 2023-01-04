@@ -408,6 +408,10 @@ footer div img {
     color: white;
 }
 
+.elemento-footer a {
+    color: white;;
+}
+
 footer div i {
     color: #FFC300;
 }
@@ -498,6 +502,46 @@ div.description-black {
     color: black;
     margin: 0 10px 5px 0;
 }
+
+/* acerca - nosotros */
+.acerca-nosotros {
+    margin: 5% 15%;
+}
+
+/* contacto */
+.contacto {
+    margin: 5% 15%;
+}
+
+/* medios-de-pago */
+.medios-de-pago {
+    margin: 5% 15%;
+}
+
+.medios-pago {
+    max-width: 100%;
+}
+
+/* preguntas-frecuentes */
+.faqs {
+    margin: 5% 15%;
+}
+
+.list-faqs {
+    display: block;
+    list-style-type: none;
+}
+
+.mailing {
+    color: blue;
+}
+
+/* politicas - envio */
+.envios {
+    margin: 5% 15%;
+    text-align: justify;
+}
+
 
 @media (min-width: 420px) {
 

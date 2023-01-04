@@ -12,4 +12,15 @@ router.get("/productDetail", controller.productDetail);
 
 router.get("/register", controller.register);
 
+router.get("/nosotros", controller.nosotros);
+
+router.get("/contacto", controller.contacto);
+
+router.get("/mediosDePago", controller.mediosDePago);
+
+router.get("/preguntasFrecuentes", controller.preguntasFrecuentes);
+
+router.get("/politicasEnvio", controller.politicasEnvio);
+
+
 module.exports = router;
