@@ -5,6 +5,9 @@ const mainRouter = require("./routes/mainRouter");
 //Middelware
 app.use(express.static("public"));
 
+//configuradion de template engine
+app.set("view engine", "ejs");
+
 //Rutas
 app.use(mainRouter);
 
