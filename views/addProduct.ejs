@@ -6,32 +6,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>ShoesWing</title>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="/public/css/style.css">
+        <link rel="stylesheet" href="/css/style.css">
     </head>
 <body>
 
-    <header>
-        <div class="logo">
-        <img src="/img/Logo shoes.png" class="imagen-logo" alt="logo">
-        <h2>ShoesWing</h2>
-        </div>
-        <nav class="top-navbar">
-            <ul>
-                <li type="none"><a href="/">Inicio</a></li>
-                <li type="none"><a href="/register"> Registrarse</a></li>
-                <li type="none"><a href="/login"> Mi Cuenta</a></li>
-            </ul>
-            <ul>
-                <li type="none" class="search-bar" ><form action="" class=""><input type="text" placeholder="Buscar..."><button type="sumbit"><i class="fa-solid fa-magnifying-glass"></i></button></form> </li>
-                <li type="none"><a href="/productCart"><i class="fa-solid fa-cart-shopping"></i></a></li>
-            </ul>
-        </nav>
-        <div class="burger-menu">
-            <i class="fa fa-bars burger"></i>
-        </div>
-        </header>
+    <%- include("./partials/header")  %> 
 
         <main>
+
+            <h2 class="titulo-agregar-producto">Agregar Producto <i class="fa-solid fa-plus"></i></h2>
 
             <form class="form-group" action="/add-product" method="post">
                 <label class="eti-add-prduct" for="product-id">ID Producto:</label><br>
@@ -75,5 +58,6 @@
     
 </body>
 
+<script src="https://kit.fontawesome.com/bfa858fa89.js" crossorigin="anonymous"></script>
 
 </html>

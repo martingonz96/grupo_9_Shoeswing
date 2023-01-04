@@ -22,5 +22,7 @@ router.get("/preguntasFrecuentes", controller.preguntasFrecuentes);
 
 router.get("/politicasEnvio", controller.politicasEnvio);
 
+router.get("/addProduct", controller.addProduct);
+
 
 module.exports = router;

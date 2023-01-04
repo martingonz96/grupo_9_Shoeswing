@@ -382,6 +382,11 @@ main section article i{
 
 /* formulario agregar producto */
 
+.titulo-agregar-producto {
+    text-align: center;
+    margin: 10px;
+}
+
 form.form-group {
     width: 70%;
     margin: 20px auto;
