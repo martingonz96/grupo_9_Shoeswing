@@ -608,6 +608,219 @@ div.description-black {
     text-align: justify;
 }
 
+/* register */
+.registerName{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.registerName label{
+    text-align: center;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.registerName input{
+    width: 90%;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: solid 1px #242F40;
+    border-radius: 8px;
+}
+
+.registerSurname{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.registerSurname label{
+    text-align: center;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.registerSurname input{
+    width: 90%;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: solid 1px #242F40;
+    border-radius: 8px;
+}
+
+.registerEmail{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.registerEmail label{
+    text-align: center;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.registerEmail input{
+    width: 90%;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: solid 1px #242F40;
+    border-radius: 8px;
+}
+
+.registerBirthday{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.registerBirthday label{
+    text-align: center;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.registerBirthday input{
+    width: 90%;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: solid 1px #242F40;
+    border-radius: 8px;
+}
+
+.registerAddres{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.registerAddres label{
+    text-align: center;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.registerAddres input{
+    width: 90%;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: solid 1px #242F40;
+    border-radius: 8px;
+}
+
+.registerPassword{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.registerPassword label{
+    text-align: center;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.registerPassword input{
+    width: 90%;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: solid 1px #242F40;
+    border-radius: 8px;
+}
+
+.registerConfirmPassword{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.registerConfirmPassword label{
+    text-align: center;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.registerConfirmPassword input{
+    width: 90%;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: solid 1px #242F40;
+    border-radius: 8px;
+}
+
+.registerButtom{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.myButtonRegister {
+	border-radius:5px;
+	padding: 6.5px;
+    border: 0px;
+	background-color:#FFC300;
+    transition: all 450ms;
+    color: black;
+    margin: 0 10px 5px 0;
+}
+
+.myButtonRegister:hover {
+	background-color: #003566;
+    color: white;
+    transition: 0.5s;
+}
+
+.registerButtomBorrar{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.myButtonBorrar {
+    border-radius:5px;
+	padding: 6.5px;
+    border: 0px;
+	background-color:#791212;
+    transition: all 450ms;
+    color: white;
+    margin: 0 10px 5px 0;	
+}
+.myButtonBorrar:hover {
+    background-color: #EA2828;
+    transition: 0.5s;
+}
+
 
 @media (min-width: 420px) {
 
@@ -652,6 +865,63 @@ div.description-black {
 
     div.burger-menu i {
         font-size: 20px;
+    }
+
+    /* register */
+    .registerName{
+        align-items: center;
+    }
+
+    .registerName input{
+        width: 70%;
+    }
+
+    .registerSurname{
+        align-items: center;
+    }
+
+    .registerSurname input{
+        width: 70%;
+    }
+
+    .registerEmail{
+        align-items: center;
+    }
+
+    .registerEmail input{
+        width: 70%;
+    }
+
+    .registerBirthday{
+        align-items: center;
+    }
+
+    .registerBirthday input{
+        width: 70%;
+    }
+
+    .registerAddres{
+        align-items: center;
+    }
+
+    .registerAddres input{
+        width: 70%;
+    }
+
+    .registerPassword{
+        align-items: center;
+    }
+
+    .registerPassword input{
+        width: 70%;
+    }
+
+    .registerConfirmPassword{
+        align-items: center;
+    }
+
+    .registerConfirmPassword input{
+        width: 70%;
     }
 
 }
