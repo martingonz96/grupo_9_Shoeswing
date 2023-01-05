@@ -1,0 +1,15 @@
+<% productsTwo.forEach(product => { %>
+
+<article>
+    <img src="<%= product.imagen %> " alt="Campera" class="product_img">
+    <div class="main-article">
+        <i class="fas fa-truck"></i>
+        <p class="price"><%= product.precio %></p>
+        <p class="discount"><%= product.descuento %>% off</p>
+        <h4 class="description"><%= product.descripcion %></h4>
+        <button class="ver-mas" onclick="window.location.href='/productDetail'">Ver Más</button>
+    </div>
+
+</article>
+<% }) %>
+
