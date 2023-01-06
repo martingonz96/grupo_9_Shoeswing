@@ -1178,7 +1178,29 @@ article {
     flex: 30%;
    }
 
-
+   .ver-mas:hover {
+    background-color:#d59a11cf;
+    transition: all 450ms;
+    transform: scale(1.05);
+   }
    
+   .product_img:hover {
+    transform: scale(1.05);
+    transition: all 450ms;
+    border-radius: 5%;
+   }
 
+   .elemento-footer a:hover {
+    color:#FFC300;
+    transition: all 450ms;
+   }
+
+   .talles li:hover {
+    background-color: rgb(221, 206, 206);
+   }
+
+   .imagen-logo:hover {
+    scale: 1.05;
+    transition: all 450ms;
+   }
 }
