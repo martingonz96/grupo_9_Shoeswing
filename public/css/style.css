@@ -39,7 +39,10 @@ header {
 
 .top-navbar {
     display: none;
-    
+}
+
+.top-navbar ul{
+    list-style: none;
 }
 
 
@@ -104,7 +107,42 @@ div.burger-menu i {
 
 /* main */
 
-div.banner {
+.carrousel{
+    width: 100%;
+    margin-top: 10px;
+    /* overflow: hidden; */
+            
+    
+    animation: slide 12s infinite alternate ease-in-out;
+}
+
+.carrousel ul{
+    display: flex;
+    align-content: center;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    width: 200%;
+}
+
+.carrousel li{
+    list-style: none;
+    width: 100%;
+}
+
+.carrousel img{
+    width: 100%;
+    height: 32em;
+}
+
+@keyframes slide {
+    0% {margin-left: 0%;}
+    25% {margin-left: 0%;}
+
+    50% {margin-left: -100%;}
+    75% {margin-left: -100%;}
+}
+
+/* div.banner {
     display: flex;
     flex-wrap: wrap;
     box-sizing: border-box;
@@ -113,7 +151,7 @@ div.banner {
 div.banner img{
     width: 100%;
     box-sizing: border-box;
-}
+} */
 
 section {
     margin: 40px 0;
