@@ -8,7 +8,7 @@ router.get("/login", controller.login);
 
 router.get("/productCart", controller.productCart);
 
-router.get("/productDetail", controller.productDetail);
+router.get("/detalle/:id/", controller.productDetail);
 
 router.get("/register", controller.register);
 

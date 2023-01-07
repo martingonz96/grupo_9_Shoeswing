@@ -9,14 +9,14 @@
     
     <main>
         <article class="detalles-producto">
-            <h3 class="titulo-detalle">Short Argentina Adidas</h3>
+            <h3 class="titulo-detalle"><%= productDetail.descripcion %> </h3>
                 
             <div class="foto-y-precio">
-                <img src="img/short_adidas.jpg" alt="Short de futbol" class="detail-img">
+                <img src=  '<%= productDetail.imagen %> 'alt="<%= productDetail.descripcion %>" class="detail-img">
                 <div class="precio-detallado">
-                    <h4 class="description-black">Short Argentina Adidas</h4>
-                    <p class="price">$12.700</p>
-                    <p class="discount">15% off</p>
+                    <h4 class="description-black"><%= productDetail.descripcion %></h4>
+                    <p class="price">$<%= productDetail.precio %> </p>
+                    <p class="discount"><%= productDetail.descuento %> % off</p>
                     <p class="texto-talles">Elegí tu talle</p>
                     <ul class="talles">
                         <li><a href=""></a>XS</li>
