@@ -76,12 +76,12 @@ const controller = {
 
     login: (req,res)=> {
     
-        res.render('login')
+        res.render('user/login')
     },
 
     productCart: (req,res)=> {
     
-        res.render('productCart')
+        res.render('product/productCart')
     },
 
     productDetail: (req,res)=> {
@@ -104,7 +104,7 @@ const controller = {
             }
         }
         if (productDetail) {
-            res.render('productDetail', { productDetail });
+            res.render('product/productDetail', { productDetail });
         } else {
             res.status(404).send('Product not found');
         }
@@ -121,41 +121,41 @@ const controller = {
 
     register:(req,res)=> {
     
-        res.render('register')
+        res.render('user/register')
     },
 
     nosotros:(req,res)=> {
     
-        res.render('nosotros')
+        res.render('secFooter/nosotros')
     },
 
     contacto:(req,res)=> {
     
-        res.render('contacto')
+        res.render('secFooter/contacto')
     },
 
     mediosDePago:(req,res)=> {
     
-        res.render('mediosDePago')
+        res.render('secFooter/mediosDePago')
     },
 
     preguntasFrecuentes:(req,res)=> {
     
-        res.render('preguntasFrecuentes')
+        res.render('secFooter/preguntasFrecuentes')
     },
 
     politicasEnvio:(req,res)=> {
     
-        res.render('politicasEnvio')
+        res.render('secFooter/politicasEnvio')
     },
 
     addProduct:(req,res)=> {
     
-        res.render('addProduct')
+        res.render('product/addProduct')
     },
 
     editProduct:(req, res) => {
-        res.render("editProduct")
+        res.render("product/editProduct")
     }
 
 };

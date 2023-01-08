@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
     
-    <%- include("./partials/head")  %> 
+    <%- include("../partials/head")  %> 
+
+    <link rel="stylesheet" href="/css/style.css">
 
 <body>
 
-    <%- include("./partials/header")  %>
+    <%- include("../partials/header")  %>
     
         <main>
 
-            <h2 class="titulo-agregar-producto">Agregar Producto <i class="fa-solid fa-plus"></i></h2>
+            <h2 class="titulo-agregar-producto">Editar Producto <i class="fa-solid fa-plus"></i></h2>
 
             <form class="form-group" action="/add-product" method="post">
                 <label class="eti-add-prduct" for="product-id">ID Producto:</label><br>
@@ -28,7 +30,7 @@
               
         </main>
 
-        <%- include ("./partials/footer") %> 
+        <%- include ("../partials/footer") %> 
 
 </body>
 
