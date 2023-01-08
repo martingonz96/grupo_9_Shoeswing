@@ -24,5 +24,7 @@ router.get("/politicasEnvio", controller.politicasEnvio);
 
 router.get("/addProduct", controller.addProduct);
 
+router.get("/editProduct", controller.editProduct);
+
 
 module.exports = router;

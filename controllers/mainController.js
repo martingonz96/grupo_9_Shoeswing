@@ -154,6 +154,10 @@ const controller = {
         res.render('addProduct')
     },
 
+    editProduct:(req, res) => {
+        res.render("editProduct")
+    }
+
 };
 
 module.exports = controller;

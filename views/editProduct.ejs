@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <%- include("./partials/head")  %> 
+
+<body>
+
+    <%- include("./partials/header")  %>
+    
+        <main>
+
+            <h2 class="titulo-agregar-producto">Editar Producto <i class="fa-solid fa-plus"></i></h2>
+
+            <form class="form-group" action="/add-product" method="post">
+                <label class="eti-add-prduct" for="product-id">ID Producto:</label><br>
+                <input class="in-add-prduct" type="text" id="product-id" name="product-id"><br>
+                <label class="eti-add-prduct" for="product-name">Nombre del producto:</label><br>
+                <input class="in-add-prduct" type="text" id="product-name" name="product-name"><br>
+                <label class="eti-add-prduct" for="product-description">Descripcion del producto:</label><br>
+                <textarea id="product-description" name="product-description"></textarea><br>
+                <label class="eti-add-prduct" for="product-price">Precio del producto:</label><br>
+                <input class="in-add-prduct" type="number" id="product-price" name="product-price"><br>
+                <label class="eti-add-prduct" for="product-photo">Foto del producto:</label><br>
+                <input class="in-add-prduct" type="file" id="product-photo" name="product-photo"><br><br>
+                <input class="in-add-prduct" type="submit" value="Agregar Producto">
+            </form> 
+              
+              
+        </main>
+
+        <%- include ("./partials/footer") %> 
+
+</body>
+
+<script src="https://kit.fontawesome.com/bfa858fa89.js" crossorigin="anonymous"></script>
+
+</html>
