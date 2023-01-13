@@ -6,9 +6,9 @@ router.get("/", controller.index);
 
 router.get("/login", controller.login);
 
-router.get("/productCart", controller.productCart);
+//router.get("/productCart", controller.productCart);
 
-router.get("/detalle/:id/", controller.productDetail);
+//router.get("/detalle/:id/", controller.productDetail);
 
 router.get("/register", controller.register);
 
@@ -22,9 +22,9 @@ router.get("/preguntasFrecuentes", controller.preguntasFrecuentes);
 
 router.get("/politicasEnvio", controller.politicasEnvio);
 
-router.get("/addProduct", controller.addProduct);
+//router.get("/addProduct", controller.addProduct);
 
-router.get("/editProduct", controller.editProduct);
+//router.get("/editProduct", controller.editProduct);
 
 
 module.exports = router;
