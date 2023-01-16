@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include("./partials/head")  %> 
+
+    <link rel="stylesheet" href="/css/style.css">
+
+<body>
+
+    <%- include("./partials/header")  %> 
+    
+    <main>
+
+        <section class="productos-destacados">
+            <h3>Resultados de la búsqueda: <%= loQueBusco %></h3>
+            <div class="productos-destacados">
+                <% for (let i = 0; i < resultados.length; i++) { %>
+        <article>
+            <a href="/products/detail/<%= resultados[i].id %> ">
+            <img src="<%= resultados[i].image %>" alt="<%= resultados[i].name %>" class="product_img">
+            </a>
+            <div class="main-article">
+                <i class="fas fa-truck"></i>
+                <p class="price"><%= resultados[i].price %></p>
+                <p class="discount"><%= resultados[i].discount%>% off</p>
+                <h4 class="description"><%= resultados[i].description%></h4>
+                <button class="ver-mas" onclick="window.location.href='/products/detail/<%= resultados[i].id %> '">Ver Más</button>
+            </div>
+        </article>
+        <% } %>
+        
+    </div>
+</section>
+
+<% if(resultados.length === 0) { %>
+    <h2 class="products-title" style="color: tomato;">No hay productos que coincidan con esa búsqueda</h2>
+<% } %>
+
+
+    </main>
+
+    <%- include ("./partials/footer") %> 
+
+</body>
+
+<script src="https://kit.fontawesome.com/bfa858fa89.js" crossorigin="anonymous"></script>
+</html>

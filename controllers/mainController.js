@@ -18,27 +18,18 @@ const controller = {
     
         res.render('user/login')
     },
+	search: (req, res) => {
 
-    //productCart: (req,res)=> {
-    
-      //  res.render('product/productCart')
-   // },
+		let loQueBusco = req.query.keywords;
+        let resultados = []
 
-   // productDetail: (req,res)=> {
-
-        //solucion original
-
-  //  let id = req.params.id
-
-   //    let product = products.find(product => product.id == id)
-
-
-   //    res.render ('productDetail', {product})
-    
-    
-   // },
-
-    
+		for (let i = 0; i < products.length; i++) {
+			if (products[i].name.toLowerCase().includes(loQueBusco.toLowerCase())) {
+				resultados.push(products[i]);
+			}
+    }
+    res.render('results', {resultados: resultados, loQueBusco: loQueBusco});
+	},    
 
     register:(req,res)=> {
     

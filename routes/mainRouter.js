@@ -24,6 +24,8 @@ const uniqueSuffix = Date.now() + path.extname(file.originalname)+ '-' + Math.ro
 
 router.get("/", controller.index);
 
+router.get('/search', controller.search);
+
 router.get("/login", controller.login);
 
 router.get("/register", controller.register);
