@@ -1,14 +1,30 @@
 const express = require("express");
 const router = express.Router();
 const controller = require("../controllers/mainController");
+const multer = require('multer');
+const path = require('path');
+
+
+//**** multer *////
+
+const storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+      cb(null, 'public/images')
+    },
+    filename: function (req, file, cb) {
+      
+const uniqueSuffix = Date.now() + path.extname(file.originalname)+ '-' + Math.round(Math.random() * 1E9)
+      cb(null, file.fieldname + '-' + uniqueSuffix)
+    }
+  })
+  
+  const upload = multer({ storage: storage });
+
+  //**** multer *////
 
 router.get("/", controller.index);
 
 router.get("/login", controller.login);
-
-//router.get("/productCart", controller.productCart);
-
-//router.get("/detalle/:id/", controller.productDetail);
 
 router.get("/register", controller.register);
 
@@ -21,10 +37,5 @@ router.get("/mediosDePago", controller.mediosDePago);
 router.get("/preguntasFrecuentes", controller.preguntasFrecuentes);
 
 router.get("/politicasEnvio", controller.politicasEnvio);
-
-//router.get("/addProduct", controller.addProduct);
-
-//router.get("/editProduct", controller.editProduct);
-
 
 module.exports = router;
