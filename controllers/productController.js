@@ -66,8 +66,57 @@ const productController = {
     },
 
     editProduct:(req, res) => {
-        res.render("product/editProduct")
+
+        let id = req.params.id
+    
+        let product = products.find(product => {
+            return product.id == id
+         })
+    
+        res.render("product/editProduct", {product})
     },
+    
+    update: (req, res) =>{
+    
+        let id = req.params.id //id que viene por URL
+        let productToEdit = products.find(product => product.id == id)
+    
+        let img 
+    
+        if(req.file != undefined){
+    
+            img = req.file.filename
+    
+        }else{
+    
+            img = productToEdit.image
+                
+        }
+            
+            productToEdit = {
+                id: productToEdit.id,
+                name: req.body.name,
+                price: req.body.price,
+                discount: req.body.discount,
+                category: req.body.category,
+                description: req.body.description,
+                image: img
+            }
+    
+        let newProduct = products.map(product => {
+    
+            if(product.id == productToEdit.id){
+    
+                return product = {...productToEdit}
+            }
+    
+            return product;
+        })
+    
+        fs.writeFileSync(productsFilePath, JSON.stringify(newProduct));
+    
+        res.redirect("/products");
+    },    
 
     // Delete - Delete one product from DB
 	destroy : (req, res) => {
