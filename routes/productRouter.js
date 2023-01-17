@@ -29,7 +29,7 @@ router.get("/productCart", controller.productCart);
 router.get("/detail/:id/", controller.productDetail);
 
 router.get("/addProduct", controller.addProduct);
-//router.post('/addProduct', upload.single('image'),  productsController.store)
+router.post('/addProduct', upload.single('image'), controller.store);
 
 router.get("/editProduct", controller.editProduct);
 //router.put('/edit/:id', upload.single('image'),  productsController.update) 
