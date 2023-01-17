@@ -36,4 +36,7 @@ router.get("/editProduct", controller.editProduct);
 
 router.get("/", controller.products)
 
+/*** DELETE ONE PRODUCT***/ 
+router.delete('/delete/:id', controller.destroy); 
+
 module.exports = router;

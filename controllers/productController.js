@@ -37,7 +37,19 @@ const productController = {
 
     editProduct:(req, res) => {
         res.render("product/editProduct")
-    }
+    },
+
+    // Delete - Delete one product from DB
+	destroy : (req, res) => {
+		
+		let id = req.params.id
+
+		let productDelete = products.filter(product => product.id != id)
+		
+		fs.writeFileSync(productsFilePath, JSON.stringify(productDelete));
+
+		res.redirect('/products')
+	}
 }
 
 
