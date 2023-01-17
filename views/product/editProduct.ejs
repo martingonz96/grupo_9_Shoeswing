@@ -22,7 +22,7 @@
                 <input class="in-add-prduct" type="text" id="product-name" name="price" value="<%= product.price %> "><br>
 
                 <label class="eti-add-prduct" for="product-name">Descuento:</label><br>
-                <input class="in-add-prduct" type="text" id="product-name" name="discount" <%= product.discount %> ><br>
+                <input class="in-add-prduct" type="text" id="product-name" name="discount" value="<%= product.discount %>" ><br>
 
                 <label class="eti-add-prduct" for="product-description">Descripcion del producto:</label><br>
                 <textarea id="product-description" name="description"><%= product.description %> </textarea><br>
@@ -33,18 +33,16 @@
                 <label class="eti-add-prduct" for="product-photo">Categria:</label><br>
                 <select name="category" id="category" class="form-input">
                     <option value="">Elegí</option>
-                    <option value="oferta">Oferta</option>
-                    <option value="visitado">Visitado</option>
-
+                    
                     <% if (product.category == "oferta") { %>
 							 
-                        <option value="oferta" selected >En oferta</option>
-                        <option value="visitado" >Últimos agregados</option>
+                        <option value="oferta" selected >Oferta</option>
+                        <option value="visitado" >Visitado</option>
 
                     <% } else { %>
 
-                        <option value="oferta" >En oferta</option>
-                        <option value="visitado" selected >Últimos agregados</option>
+                        <option value="oferta" >Oferta</option>
+                        <option value="visitado" selected >Visitado</option>
 
                     <% } %>	
 

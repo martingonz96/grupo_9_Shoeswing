@@ -1,1 +1,92 @@
-[{"id":1,"name":"Campera Fila Energy","price":16770,"discount":10,"description":"Campera Fila, color gris, modelo invierno","image":"/img/campera_fila.jpg","category":"oferta"},{"id":2,"name":"Short Argentina Adidas","price":12700,"discount":15,"description":"Short Argentina Adidas, color azul","image":"/img/short_adidas.jpg","category":"oferta"},{"id":3,"name":"Zapatillas Nike Air Max","price":23999,"discount":5,"description":"Zapatillas Nike Air Max, modelo 2019","image":"/img/zapatilla_nike.jpg","category":"oferta"},{"id":4,"name":"Remera Wilson ATP","price":9890,"discount":10,"description":"Remera Wilson ATP, modelo primavera","image":"/img/remera_wilson.jpg","category":"oferta"},{"id":5,"name":"Botines Puma Attack","price":13199,"discount":40,"description":"Botines Puma Attack, modelo 2020, color amarillo","image":"/img/botines_puma.jpg","category":"visitado"},{"id":6,"name":"Gorra Jordan Streetcool","price":6999,"discount":55,"description":"Gorra Jordan Streetcool, modelo 2021, coleccion verano","image":"/img/gorra_jordan.jpg","category":"visitado"},{"id":7,"name":"Jogging Under Armour","price":8689,"discount":60,"description":"Jogging Under Armour, modelo invierno, marca Under Armour","image":"/img/jogging_underarmour.jpeg","category":"visitado"},{"id":8,"name":"Remera Nike Champions","price":3999,"discount":70,"description":"Remera Nike Champions, modelo 2021, coleccion verano","image":"/img/remera_nike.jpg","category":"visitado"},{"id":9,"name":"producto de prueba","price":"15000","discount":"5","description":"kdfjkssj","category":"","image":"default-image.png"},{"id":10,"name":"producto de prueba 2  ","price":"500","discount":"","category":"oferta","description":"nueva descripcion ","image":"/img/default-image.png"}]
+[
+    {
+        "id": 1,
+        "name": "Campera Fila Energy",
+        "price": 16770,
+        "discount": 10,
+        "description": "Campera Fila, color gris, modelo invierno",
+        "image": "/img/campera_fila.jpg",
+        "category": "oferta"
+    },
+    {
+        "id": 2,
+        "name": "Short Argentina Adidas",
+        "price": 12700,
+        "discount": 15,
+        "description": "Short Argentina Adidas, color azul",
+        "image": "/img/short_adidas.jpg",
+        "category": "oferta"
+    },
+    {
+        "id": 3,
+        "name": "Zapatillas Nike Air Max",
+        "price": 23999,
+        "discount": 5,
+        "description": "Zapatillas Nike Air Max, modelo 2019",
+        "image": "/img/zapatilla_nike.jpg",
+        "category": "oferta"
+    },
+    {
+        "id": 4,
+        "name": "Remera Wilson ATP",
+        "price": 9890,
+        "discount": 10,
+        "description": "Remera Wilson ATP, modelo primavera",
+        "image": "/img/remera_wilson.jpg",
+        "category": "oferta"
+    },
+    {
+        "id": 5,
+        "name": "Botines Puma Attack",
+        "price": 13199,
+        "discount": 40,
+        "description": "Botines Puma Attack, modelo 2020, color amarillo",
+        "image": "/img/botines_puma.jpg",
+        "category": "visitado"
+    },
+    {
+        "id": 6,
+        "name": "Gorra Jordan Streetcool",
+        "price": 6999,
+        "discount": 55,
+        "description": "Gorra Jordan Streetcool, modelo 2021, coleccion verano",
+        "image": "/img/gorra_jordan.jpg",
+        "category": "visitado"
+    },
+    {
+        "id": 7,
+        "name": "Jogging Under Armour",
+        "price": 8689,
+        "discount": 60,
+        "description": "Jogging Under Armour, modelo invierno, marca Under Armour",
+        "image": "/img/jogging_underarmour.jpeg",
+        "category": "visitado"
+    },
+    {
+        "id": 8,
+        "name": "Remera Nike Champions",
+        "price": 3999,
+        "discount": 70,
+        "description": "Remera Nike Champions, modelo 2021, coleccion verano",
+        "image": "/img/remera_nike.jpg",
+        "category": "visitado"
+    },
+    {
+        "id": 9,
+        "name": "producto de prueba",
+        "price": "15000",
+        "discount": "5",
+        "description": "kdfjkssj",
+        "category": "",
+        "image": "default-image.png"
+    },
+    {
+        "id": 10,
+        "name": "producto de prueba 2   ",
+        "price": "500 ",
+        "discount": "15",
+        "category": "oferta",
+        "description": "nueva descripcion  ",
+        "image": "/img/default-image.png"
+    }
+]
