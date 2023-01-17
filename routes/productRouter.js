@@ -31,8 +31,8 @@ router.get("/detail/:id/", controller.productDetail);
 router.get("/addProduct", controller.addProduct);
 router.post('/addProduct', upload.single('image'), controller.store);
 
-router.get("/editProduct", controller.editProduct);
-//router.put('/edit/:id', upload.single('image'),  productsController.update) 
+router.get("/editProduct/:id/", controller.editProduct);
+router.put('/editProduct/:id/', upload.single('image'),  controller.update) 
 
 router.get("/", controller.products)
 

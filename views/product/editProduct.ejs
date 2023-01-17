@@ -13,18 +13,44 @@
 
             <h2 class="titulo-agregar-producto">Editar Producto <i class="fa-solid fa-plus"></i></h2>
 
-            <form class="form-group" action="/add-product" method="post">
-                <label class="eti-add-prduct" for="product-id">ID Producto:</label><br>
-                <input class="in-add-prduct" type="text" id="product-id" name="product-id"><br>
+            <form class="form-group" action="/products/editProduct/<%= product.id %>?_method=PUT" method="post">
+                
                 <label class="eti-add-prduct" for="product-name">Nombre del producto:</label><br>
-                <input class="in-add-prduct" type="text" id="product-name" name="product-name"><br>
+                <input class="in-add-prduct" type="text" id="product-name" name="name" value="<%= product.name %> "><br>
+
+                <label class="eti-add-prduct" for="product-name">Precio:</label><br>
+                <input class="in-add-prduct" type="text" id="product-name" name="price" value="<%= product.price %> "><br>
+
+                <label class="eti-add-prduct" for="product-name">Descuento:</label><br>
+                <input class="in-add-prduct" type="text" id="product-name" name="discount" <%= product.discount %> ><br>
+
                 <label class="eti-add-prduct" for="product-description">Descripcion del producto:</label><br>
-                <textarea id="product-description" name="product-description"></textarea><br>
-                <label class="eti-add-prduct" for="product-price">Precio del producto:</label><br>
-                <input class="in-add-prduct" type="number" id="product-price" name="product-price"><br>
+                <textarea id="product-description" name="description"><%= product.description %> </textarea><br>
+
                 <label class="eti-add-prduct" for="product-photo">Foto del producto:</label><br>
-                <input class="in-add-prduct" type="file" id="product-photo" name="product-photo"><br><br>
-                <input class="in-add-prduct" type="submit" value="Agregar Producto">
+                <input class="in-add-prduct" type="file" id="product-photo" name="image"><br><br>
+
+                <label class="eti-add-prduct" for="product-photo">Categria:</label><br>
+                <select name="category" id="category" class="form-input">
+                    <option value="">Elegí</option>
+                    <option value="oferta">Oferta</option>
+                    <option value="visitado">Visitado</option>
+
+                    <% if (product.category == "oferta") { %>
+							 
+                        <option value="oferta" selected >En oferta</option>
+                        <option value="visitado" >Últimos agregados</option>
+
+                    <% } else { %>
+
+                        <option value="oferta" >En oferta</option>
+                        <option value="visitado" selected >Últimos agregados</option>
+
+                    <% } %>	
+
+                </select>
+
+                <input class="in-add-prduct" type="submit" value="Editar Producto">
             </form> 
               
               
