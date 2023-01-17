@@ -66,57 +66,20 @@ const productController = {
     },
 
     editProduct:(req, res) => {
-
-        let id = req.params.id
-
-        let product = products.find(product => {
-            return product.id == id
-        })
-
-        res.render("product/editProduct", {product})
+        res.render("product/editProduct")
     },
 
-    update: (req, res) =>{
-
-        let id = req.params.id //id que viene por URL
-		let productToEdit = products.find(product => product.id == id)
-
-		let img 
-
-		if(req.file != undefined){
-
-			img = req.file.filename
-
-		}else{
-
-			img = productToEdit.image
-			
-		}
+    // Delete - Delete one product from DB
+	destroy : (req, res) => {
 		
-		productToEdit = {
-			id: productToEdit.id,
-			name: req.body.name,
-			price: req.body.price,
-			discount: req.body.discount,
-			category: req.body.category,
-			description: req.body.description,
-			image: img
-		}
+		let id = req.params.id
 
-        let newProduct = products.map(product => {
+		let productDelete = products.filter(product => product.id != id)
+		
+		fs.writeFileSync(productsFilePath, JSON.stringify(productDelete));
 
-			if(product.id == productToEdit.id){
-
-				return product = {...productToEdit}
-			}
-
-			return product;
-		})
-
-		fs.writeFileSync(productsFilePath, JSON.stringify(newProduct));
-
-        res.redirect("/products");
-    }
+		res.redirect('/products')
+	}
 }
 
 
