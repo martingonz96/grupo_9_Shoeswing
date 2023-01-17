@@ -35,6 +35,36 @@ const productController = {
         res.render('product/addProduct')
     },
 
+    store: (req, res) => {
+
+        let img 
+
+		if(req.file != undefined){
+
+			img = req.file.filename
+			
+		}else{
+			
+			img = "/img/default-image.png"
+			
+		}
+
+        productToCreate = {
+			
+			id: products[products.length-1].id +1,
+			...req.body,
+			image: img
+			
+		}
+
+        products.push(productToCreate);
+		
+		fs.writeFileSync(productsFilePath, JSON.stringify(products, null , ""));
+
+		res.redirect("/products");
+
+    },
+
     editProduct:(req, res) => {
         res.render("product/editProduct")
     }
