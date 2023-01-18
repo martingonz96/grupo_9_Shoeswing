@@ -2,14 +2,14 @@
 
 <article>
     <a href="/products/detail/<%= product.id %> ">
-    <img src="<%= product.image %> " alt="<%= product.description %>" class="product_img">
+    <img src="/img/products/<%= product.image %> " alt="<%= product.description %>" class="product_img">
     </a>
     <div class="main-article">
         <i class="fas fa-truck"></i>
         <p class="price"><%= product.price %></p>
         <p class="discount"><%= product.discount %>% off</p>
         <h4 class="description"><%= product.name %></h4>
-        <button class="ver-mas" onclick="window.location.href='/productDetail'">Ver Más</button>
+        <button class="ver-mas" onclick="window.location.href='/products/detail/<%= product.id %>'">Ver Más</button>
     </div>
 
 </article>
