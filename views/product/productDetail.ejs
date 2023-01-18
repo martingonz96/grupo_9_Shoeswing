@@ -11,13 +11,13 @@
     
     <main>
         <article class="detalles-producto">
-            <h3 class="titulo-detalle"><%= product.name %> </h3>
+            <h3 class="titulo-detalle"><%= product.name %></h3>
                 
             <div class="foto-y-precio">
-                <img src=  '<%= product.image %> 'alt="<%= product.description %>" class="detail-img">
+                <img src=  '/img/<%= product.image %>'alt="<%= product.description %>" class="detail-img">
                 <div class="precio-detallado">
                     <h4 class="description-black"><%= product.description %></h4>
-                    <p class="price">$<%= product.price %> </p>
+                    <p class="price">$<%= product.price %></p>
                     <p class="discount"><%= product.discount %> % off</p>
                     <p class="texto-talles">Elegí tu talle</p>
                     <ul class="talles">

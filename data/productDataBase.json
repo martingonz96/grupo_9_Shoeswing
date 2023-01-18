@@ -5,7 +5,7 @@
         "price": 16770,
         "discount": 10,
         "description": "Campera Fila, color gris, modelo invierno",
-        "image": "/img/campera_fila.jpg",
+        "image": "campera_fila.jpg",
         "category": "oferta"
     },
     {
@@ -14,7 +14,7 @@
         "price": 12700,
         "discount": 15,
         "description": "Short Argentina Adidas, color azul",
-        "image": "/img/short_adidas.jpg",
+        "image": "short_adidas.jpg",
         "category": "oferta"
     },
     {
@@ -23,7 +23,7 @@
         "price": 23999,
         "discount": 5,
         "description": "Zapatillas Nike Air Max, modelo 2019",
-        "image": "/img/zapatilla_nike.jpg",
+        "image": "zapatilla_nike.jpg",
         "category": "oferta"
     },
     {
@@ -32,7 +32,7 @@
         "price": 9890,
         "discount": 10,
         "description": "Remera Wilson ATP, modelo primavera",
-        "image": "/img/remera_wilson.jpg",
+        "image": "remera_wilson.jpg",
         "category": "oferta"
     },
     {
@@ -41,7 +41,7 @@
         "price": 13199,
         "discount": 40,
         "description": "Botines Puma Attack, modelo 2020, color amarillo",
-        "image": "/img/botines_puma.jpg",
+        "image": "botines_puma.jpg",
         "category": "visitado"
     },
     {
@@ -50,7 +50,7 @@
         "price": 6999,
         "discount": 55,
         "description": "Gorra Jordan Streetcool, modelo 2021, coleccion verano",
-        "image": "/img/gorra_jordan.jpg",
+        "image": "gorra_jordan.jpg",
         "category": "visitado"
     },
     {
@@ -59,7 +59,7 @@
         "price": 8689,
         "discount": 60,
         "description": "Jogging Under Armour, modelo invierno, marca Under Armour",
-        "image": "/img/jogging_underarmour.jpeg",
+        "image": "jogging_underarmour.jpeg",
         "category": "visitado"
     },
     {
@@ -68,7 +68,7 @@
         "price": 3999,
         "discount": 70,
         "description": "Remera Nike Champions, modelo 2021, coleccion verano",
-        "image": "/img/remera_nike.jpg",
+        "image": "remera_nike.jpg",
         "category": "visitado"
     },
     {
@@ -82,11 +82,11 @@
     },
     {
         "id": 10,
-        "name": "producto de prueba 2   ",
-        "price": "500 ",
+        "name": "producto de prueba 2",
+        "price": "25000",
         "discount": "15",
         "category": "oferta",
-        "description": "nueva descripcion  ",
-        "image": "/img/default-image.png"
+        "description": "nueva descripcion",
+        "image": "default-image.png"
     }
 ]
