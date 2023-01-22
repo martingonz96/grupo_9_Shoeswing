@@ -15,7 +15,7 @@
             <h3>Resultados de la búsqueda: <%= loQueBusco %></h3>
             <div class="productos-destacados">
                 <% for (let i = 0; i < resultados.length; i++) { %>
-        <article>
+        <article class="resultado-busqueda">
             <a href="/products/detail/<%= resultados[i].id %> ">
             <img src="/img/products/<%= resultados[i].image %>" alt="<%= resultados[i].name %>" class="product_img">
             </a>

@@ -15,12 +15,12 @@ const productController = {
 
         //solucion original
 
-    let id = req.params.id
+        let id = req.params.id
 
-       let product = products.find(product => product.id == id)
+        let product = products.find(product => product.id == id)
 
 
-       res.render ('product/productDetail', {product})
+        res.render ('product/productDetail', {product})
     
     
     },
