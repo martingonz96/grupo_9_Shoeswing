@@ -1088,6 +1088,18 @@ div.productos-destacados {
     flex-direction: row;
 }
 
+div.productos-todos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+}
+
+.listado-productos {
+    margin: 0px 10px;
+}
+
 article {
     flex: 35%;
     justify-content: space-around;
@@ -1217,6 +1229,17 @@ article {
         flex-direction: row;
    }
 
+   div.productos-todos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+}
+
+.listado-productos {
+    margin: 0px 10px;
+}
    article {
     flex: 30%;
    }

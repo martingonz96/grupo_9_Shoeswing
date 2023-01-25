@@ -70,23 +70,5 @@
         "description": "Remera Nike Champions, modelo 2021, coleccion verano",
         "image": "remera_nike.jpg",
         "category": "visitado"
-    },
-    {
-        "id": 9,
-        "name": "producto de prueba",
-        "price": "15000",
-        "discount": "5",
-        "description": "kdfjkssj",
-        "category": "",
-        "image": "default-image.png"
-    },
-    {
-        "id": 10,
-        "name": "producto de prueba 2",
-        "price": "25000",
-        "discount": "15",
-        "category": "oferta",
-        "description": "nueva descripcion",
-        "image": "default-image.png"
     }
 ]
