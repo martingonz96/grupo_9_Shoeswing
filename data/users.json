@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "firstName": "Federico",
+        "lastName": "Caminal",
+        "email": "federico@shoeswing.com",
+        "password": 1234,
+        "category": "admin",
+        "avatar": "default-image.jpg"
+    },
+
+    {
+        "id": 2,
+        "firstName": "Martín",
+        "lastName": "González",
+        "email": "martin@shoeswing.com",
+        "password": 1234,
+        "category": "admin",
+        "avatar": "default-image.jpg"
+    },
+
+    {
+        "id": 3,
+        "firstName": "Juan",
+        "lastName": "Castellano",
+        "email": "juan@shoeswing.com",
+        "password": 1234,
+        "category": "admin",
+        "avatar": "default-image.jpg"
+    }
+    
+]
