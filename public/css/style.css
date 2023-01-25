@@ -604,6 +604,33 @@ div.description-black {
     margin: 0 10px 5px 0;
 }
 
+.action-button.edit {
+    background-color: #003566;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.8em;
+    color: #ffffff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 30px;
+    margin: 15px;
+}
+
+.action-button.delete {
+    background-color: #da0a0ace;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.8em;
+    color: #ffffff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 30px;
+    margin: 15px;
+}
+
+
 /* acerca - nosotros */
 .acerca-nosotros {
     margin: 5% 15%;
