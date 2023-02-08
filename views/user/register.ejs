@@ -11,41 +11,68 @@
     
     <main>
 
+    <form action="/create" method="POST">
         <div class="registerName">
-            <label>Nombre</label> <input type="text" name="nombre" placeholder="Nombre" required>
+            <label>Nombre</label> <input type="text" name="nombre" placeholder="Nombre" required value="<%= locals.oldData ? oldData.nombre : null %> ">
         </div>
+        <% if (locals.errors && errors.nombre) { %>
+            <div class="text-danger">
+              <%= errors.nombre.msg %> 
+             </div>
+          <% } %>
 
         <div class="registerSurname">
-            <label>Apellido</label> <input type="text" name="apellido" placeholder="Apellido" required>
+            <label>Apellido</label> <input type="text" name="apellido" placeholder="Apellido" required value="<%= locals.oldData ? oldData.apellido : null %> ">
         </div>
+        <% if (locals.errors && errors.apellido) { %>
+            <div class="text-danger">
+              <%= errors.apellido.msg %> 
+             </div>
+          <% } %>
 
         <div class="registerEmail">
-            <label>Email</label> <input type="email" name="email" placeholder="Email" required>
+            <label>Email</label> <input type="email" name="email" placeholder="Email" required value="<%= locals.oldData ? oldData.email : null %> ">
         </div>
+        <% if (locals.errors && errors.email) { %>
+            <div class="text-danger">
+              <%= errors.email.msg %> 
+             </div>
+          <% } %>
 
         <div class="registerBirthday">
-            <label>Fecha de nacimiento</label> <input type="date" name="fechaDeNacimiento">
+            <label>Fecha de nacimiento</label> <input type="date" name="fechaDeNacimiento" value="<%= locals.oldData ? oldData.fechaDeNacimiento : null %> ">
         </div>
+        <% if (locals.errors && errors.fechaDeNacimiento) { %>
+            <div class="text-danger">
+              <%= errors.fechaDeNacimiento.msg %> 
+             </div>
+          <% } %>
 
         <div class="registerAddres">
-            <label >Domicilio</label> <input type="text" name="domicilio" placeholder="Domicilio" required>
+            <label >Domicilio</label> <input type="text" name="domicilio" placeholder="Domicilio" required value="<%= locals.oldData ? oldData.domicilio : null %> ">
         </div>
+        <% if (locals.errors && errors.domicilio) { %>
+            <div class="text-danger">
+              <%= errors.domicilio.msg %> 
+             </div>
+          <% } %>
 
         <div class="registerPassword">
             <label>Contraseña</label> <input type="password" name="password" placeholder="Elegí tu contraseña" required minlength="6">
         </div>
-
-        <div class="registerConfirmPassword">
-            <label>Confirmar contraseña</label> <input type="password" name="password" placeholder="Confirmá tu contraseña" required minlength="6">
-        </div>
-
+        <% if (locals.errors && errors.password) { %>
+            <div class="text-danger">
+              <%= errors.password.msg %> 
+             </div>
+          <% } %>
         <div class="registerButtom">
-            <a href="/" class="myButtonRegister" type="submit">Registrarse</a>
+        <input class="myButtonRegister" type="submit" value="Registrarse" >
+        </div>
+        <div class="registerButtomBorrar">
+            <a href="/users/create" class="myButtonBorrar" type="reset">Borrar</a>
         </div>
 
-        <div class="registerButtomBorrar">
-            <a href="/" class="myButtonBorrar" type="reset">Borrar</a>
-        </div>
+    </form>
 
     </main>
 

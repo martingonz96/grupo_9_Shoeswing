@@ -28,10 +28,6 @@ router.get("/", controller.index);
 
 router.get('/search', controller.search);
 
-router.get("/login", controller.login);
-
-router.get("/register", controller.register);
-
 router.get("/nosotros", controller.nosotros);
 
 router.get("/contacto", controller.contacto);

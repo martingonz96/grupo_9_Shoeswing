@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include ("../partials/head") %> 
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <%- include("../partials/header")  %>
+    <h1>Hola <%= user.nombre %> <%= user.apellido %></h1><br>
+    <h2><%= user.email %> </h2><br>
+    <h2>Direccion: <%= user.domicilio %></h2>
+    <h2>Fecha de nacimiento: <%= user.fechaDeNacimiento %></h2>
+
+    <%- include ("../partials/footer") %> 
+</body>
+
+<script src="https://kit.fontawesome.com/bfa858fa89.js" crossorigin="anonymous"></script>
+</html>

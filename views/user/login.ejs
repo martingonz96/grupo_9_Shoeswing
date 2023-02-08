@@ -11,23 +11,30 @@
     
     <main>
 
+        <form action="/login" method="POST">
+
         <div class="loginUser">
             <label>Usuario</label>
-            <input type="text" minlength="8" required placeholder="usuario">
+            <input type="email" minlength="8" required placeholder="email" name="email">
         </div>
+        <% if (locals.errors && errors.email) { %>
+            <div class="text-danger">
+               <%= errors.email.msg %> 
+            </div>
+           <% } %>
 
         <div class="loginPassword">
             <label>Contraseña</label>
-            <input type="password" minlength="6" required placeholder="contraseña">
+            <input type="password" minlength="6" required placeholder="contraseña" name="password">
         </div>
 
         <div class="loginRemember">
-            <input type="checkbox"><label>Recordarme</label>
+            <input type="checkbox" name="remember_user"><label>Recordarme</label>
         </div>
-
         <div class="loginButtonIngresar">
-            <a href="/" class="myButtonLogin" type="submit">Ingresar</a>
+        <input class="myButtonLogin" type="submit" value="Ingresar">
         </div>
+    </form>
 
     </main>
 

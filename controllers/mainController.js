@@ -14,10 +14,6 @@ const controller = {
         res.render('index', {products: products, visitado:visitado, oferta: oferta})
     },
 
-    login: (req,res)=> {
-    
-        res.render('user/login')
-    },
 	search: (req, res) => {
 
 		let loQueBusco = req.query.keywords;
@@ -31,10 +27,6 @@ const controller = {
     res.render('results', {resultados: resultados, loQueBusco: loQueBusco});
 	},    
 
-    register:(req,res)=> {
-    
-        res.render('user/register')
-    },
 
     nosotros:(req,res)=> {
     

@@ -1,32 +1,38 @@
 [
-    {
-        "id": 1,
-        "firstName": "Federico",
-        "lastName": "Caminal",
-        "email": "federico@shoeswing.com",
-        "password": 1234,
-        "category": "admin",
-        "avatar": "default-image.jpg"
-    },
-
-    {
-        "id": 2,
-        "firstName": "Martín",
-        "lastName": "González",
-        "email": "martin@shoeswing.com",
-        "password": 1234,
-        "category": "admin",
-        "avatar": "default-image.jpg"
-    },
-
-    {
-        "id": 3,
-        "firstName": "Juan",
-        "lastName": "Castellano",
-        "email": "juan@shoeswing.com",
-        "password": 1234,
-        "category": "admin",
-        "avatar": "default-image.jpg"
-    }
-    
+ {
+  "id": 1,
+  "firstName": "Federico",
+  "lastName": "Caminal",
+  "email": "federico@shoeswing.com",
+  "password": 1234,
+  "category": "admin",
+  "avatar": "default-image.jpg"
+ },
+ {
+  "id": 2,
+  "firstName": "Martín",
+  "lastName": "González",
+  "email": "martin@shoeswing.com",
+  "password": 1234,
+  "category": "admin",
+  "avatar": "default-image.jpg"
+ },
+ {
+  "id": 3,
+  "firstName": "Juan",
+  "lastName": "Castellano",
+  "email": "juan@shoeswing.com",
+  "password": 1234,
+  "category": "admin",
+  "avatar": "default-image.jpg"
+ },
+ {
+  "id": 4,
+  "nombre": " martin",
+  "apellido": "  gonzalez",
+  "email": "martingonzalezachaval@gmail.com",
+  "fechaDeNacimiento": "2023-02-25",
+  "domicilio": " avenida Ohiggins 5390",
+  "password": "$2a$10$fY28NP3/rFGAf3vz2OX3GeuwW.wTQZ53SX6FC5XoHIH1Jj0MN/b0C"
+ }
 ]

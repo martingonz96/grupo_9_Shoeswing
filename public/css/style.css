@@ -964,6 +964,11 @@ div.description-black {
     max-width: 400px;
 }
 
+.text-danger {
+    text-align: center;
+    color: #EA2828;
+}
+
 @media (min-width: 420px) {
 
     header {
