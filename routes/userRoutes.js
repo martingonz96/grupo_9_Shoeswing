@@ -12,10 +12,10 @@ const guestMiddleware = require('../middlewares/guest');
 
 
 // registro
-router.get('/users/create', guestMiddleware, usersController.register)
+router.get('/create', guestMiddleware, usersController.register)
 
 // proceso de registro
-router.post('/users/create', validations ,usersController.createUser);
+router.post('/create', validations ,usersController.createUser);
 
 // login
 router.get('/login', guestMiddleware, usersController.login);
@@ -24,7 +24,7 @@ router.get('/login', guestMiddleware, usersController.login);
 router.post('/login', usersController.loginProcess);
 
 // profile
-router.get('/user/profile', authMiddleware, usersController.profile);
+router.get('/profile', authMiddleware, usersController.profile);
 
 ///Logout
 router.get('/logout', usersController.logout)

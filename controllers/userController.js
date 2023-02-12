@@ -39,7 +39,8 @@ module.exports = {
 
         let userCreate = {
             ...req.body,
-            password: bcryptjs.hashSync(req.body.password, 10)
+            password: bcryptjs.hashSync(req.body.password, 10),
+            passwordConfirmation: bcryptjs.hashSync(req.body.passwordConfirmation, 10)
         }
 
         let userCreated = user.create(userCreate);
@@ -65,7 +66,7 @@ module.exports = {
             if(req.body.remember_user) {
                 res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 2 })
             }
-            return res.redirect('user/profile');
+            return res.redirect('profile');
           }
           return res.render('user/login', {
             errors:{

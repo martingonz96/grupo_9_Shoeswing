@@ -34,5 +34,15 @@
   "fechaDeNacimiento": "2023-02-25",
   "domicilio": " avenida Ohiggins 5390",
   "password": "$2a$10$fY28NP3/rFGAf3vz2OX3GeuwW.wTQZ53SX6FC5XoHIH1Jj0MN/b0C"
+ },
+ {
+  "id": 5,
+  "nombre": "  martin",
+  "apellido": "  gonzalez",
+  "email": "martin@linxdigital.com",
+  "fechaDeNacimiento": "2023-02-21",
+  "domicilio": " avenida Ohiggins 5390",
+  "password": "$2a$10$XvL7wl2FfJ2Fbb0rvwLCLefDA2nteUCrvAI4EP.KD8jd/hL.CTX.a",
+  "passwordConfirmation": "$2a$10$yJwTB3z1IlgTFdr6RfHtDuwS9njO8NhGFmeY/8/k0GBtZRENM0i8G"
  }
 ]

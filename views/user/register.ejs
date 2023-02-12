@@ -65,11 +65,20 @@
               <%= errors.password.msg %> 
              </div>
           <% } %>
+
+          <div class="registerPassword">
+            <label>Confirmar contraseña</label> <input type="password" name="passwordConfirmation" placeholder="Confirma tu contraseña" required minlength="6">
+        </div>
+        <% if (locals.errors && errors.passwordConfirmation) { %>
+            <div class="text-danger">
+              <%= errors.passwordConfirmation.msg %> 
+             </div>
+          <% } %>
         <div class="registerButtom">
         <input class="myButtonRegister" type="submit" value="Registrarse" >
         </div>
         <div class="registerButtomBorrar">
-            <a href="/users/create" class="myButtonBorrar" type="reset">Borrar</a>
+            <a href="/create" class="myButtonBorrar" type="reset">Borrar</a>
         </div>
 
     </form>

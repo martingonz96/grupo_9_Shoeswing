@@ -8,12 +8,13 @@
             <% if (locals.isLogged) { %>
                 <li>Hola <%= locals.userLogged.nombre %>! </li>
                 <li type="none"><a href="/">Inicio</a></li>
-                <li><a href="/user/profile">Mi cuenta</a></li>
+                <li><a href="/profile">Mi cuenta</a></li>
                 <li type="none"><a href="/products/addProduct"> Vender</a></li>
                 <li><a href="/logout">Cerrar sesión</a></li>
               <% } else {%>
-               
-                <li type="none"><a href="/users/create"> Registrarse</a></li>
+
+                <li type="none"><a href="/">Inicio</a></li>               
+                <li type="none"><a href="/create"> Registrarse</a></li>
                 <li type="none"><a href="/login"> Inciar Sesión</a></li>
               <% } %>
         </ul>

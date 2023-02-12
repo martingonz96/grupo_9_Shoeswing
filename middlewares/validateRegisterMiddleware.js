@@ -9,7 +9,16 @@ const validations = [
     body('email').notEmpty().withMessage('Escribir un email').bail().isEmail().withMessage('Email invalido'),
     body('fechaDeNacimiento').notEmpty().withMessage('Escribir una fecha'),
     body('domicilio').notEmpty().withMessage('Escribir un domicilio'),
-    body('password').notEmpty().withMessage('Escribir una contrasena')
+    body('password').notEmpty().withMessage('Escribir una contrasena'),
+    body("passwordConfirmation")
+    .notEmpty()
+    .withMessage("Confirmar contraseña")
+    .custom((value, { req }) => {
+      if (value !== req.body.password) {
+        throw new Error("Las contraseñas no coinciden");
+      }
+      return true;
+    })
 ];
 
 
