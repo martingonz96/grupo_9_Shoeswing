@@ -15,9 +15,6 @@
 
             <form class="form-group" action="/products/addProduct" method="post" enctype="multipart/form-data">
 
-                <!-- <label class="eti-add-prduct" for="product-id">ID Producto:</label><br>
-                <input class="in-add-prduct" type="text" id="product-id" name="product-id"><br> -->
-
                 <label class="eti-add-prduct" for="product-name">Nombre del producto:</label><br>
                 <input class="in-add-prduct" type="text" id="product-name" name="name"><br>
 
@@ -33,12 +30,23 @@
                 <label class="eti-add-prduct" for="product-photo">Foto del producto:</label><br>
                 <input class="in-add-prduct" type="file" id="product-photo" name="image"><br><br>
 
-                <label class="eti-add-prduct" for="product-photo">Categria:</label><br>
-                <select name="category" id="category" class="form-input">
+                <label class="eti-add-prduct" for="category">Categoria:</label><br>
+                <select name="category_id" id="category" class="form-input">
                     <option value="">Elegí</option>
-                    <option value="oferta">Oferta</option>
-                    <option value="visitado">Visitado</option>
+                    <% categories.forEach(category => { %>
+                        <option value="<%= category.id %>"><%= category.category %></option>
+                    <% }); %>
                 </select>
+
+                <label class="eti-add-prduct" for="category">Tipo de producto:</label><br>
+                <select name="type" id="category" class="form-input">
+                    <option value="">Elegí</option>
+                        <option value="ropa">Ropa</option>
+                        <option value="zapatilla">Zapatilla</option>
+                </select>
+                
+              
+                
 
                 <input class="in-add-prduct" type="submit" value="Agregar Producto">
             </form> 
@@ -50,6 +58,4 @@
 
 </body>
 
-<script src="https://kit.fontawesome.com/bfa858fa89.js" crossorigin="anonymous"></script>
-
-</html>
+<script src="https://kit.fontawesome.com/b

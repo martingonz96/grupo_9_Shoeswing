@@ -27,6 +27,7 @@ app.use(methodOverride('_method'));
 const mainRouter = require("./routes/mainRouter");
 const productsRouter = require('./routes/productRouter');
 const usersRoutes = require ('./routes/userRoutes');
+const indexRouter = require('./routes/indexRoutes');
 
 
 //configuradion de template engine
@@ -37,5 +38,6 @@ app.set('views', './views');
 app.use(mainRouter);
 app.use('/products', productsRouter);
 app.use(usersRoutes);
+app.use(indexRouter)
 
 app.listen(3000, (console.log("listening on port 3000")));

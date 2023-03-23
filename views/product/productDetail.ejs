@@ -21,11 +21,24 @@
                     <p class="discount"><%= product.discount %> % off</p>
                     <p class="texto-talles">Elegí tu talle</p>
                     <ul class="talles">
-                        <li><a href=""></a>XS</li>
-                        <li><a href=""></a>S</li>
-                        <li><a href=""></a>M</li>
-                        <li><a href=""></a>L</li>
-                        <li><a href=""></a>XL</li>
+                        <% if (product.type === "ropa") { %>
+                            <% sizes.slice(0, 5).forEach(size => { %>
+                                <li><a href=""></a><%= size.size %></li>
+                            <% }) %>
+                        <% } else { %>
+                            <% sizes.slice(5, 12).forEach(size => { %>
+                                <li><a href=""></a><%= size.size %></li>
+                            <% }) %>
+                        <% } %>
+                    </ul>
+                    <p class="texto-talles">Elegí tu Color</p>
+                    <ul class="colores">
+                        <% colors.forEach(color => { %>
+
+                            <li><a href=""></a><%= color.color %></li>
+                         
+                        <% }) %>
+                        
                     </ul>
                     <form class="eleccion-cantidad" action="#">
                         <label for="cantidad">Cantidad</label>
@@ -62,17 +75,18 @@
             </div>
         </article>
 
-        <a href="/products/editProduct/<%= product.id %>" class="action-button edit">EDITAR PRODUCTO</a>
+        <% if (locals.userLogged && locals.userLogged.user_category_id == 1) { %>
+            <a href="/products/editProduct/<%= product.id %>" class="action-button edit">EDITAR PRODUCTO</a>
+        
+            <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST" style="display: inline-flex">
+                <button type="submit" class="action-button delete">ELIMINAR</button>
+            </form>
+        <% } %>
 
-        <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST" style="display: inline-flex">
-            <button type="submit" class="action-button delete">ELIMINAR</button>
+        </main>
 
-    </main>
-
-    <%- include ("../partials/footer") %> 
-
-</body>
-
-    <script src="https://kit.fontawesome.com/bfa858fa89.js" crossorigin="anonymous"></script>
+        <%- include ("../partials/footer") %> 
     
-</html>
+    </body>
+    
+        <script src="https://kit.fontawesome.com/bfa858fa89.js" crossorigin="anonymous"></script>

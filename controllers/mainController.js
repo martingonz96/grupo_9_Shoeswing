@@ -1,5 +1,9 @@
 const fs = require('fs');
 const path = require('path');
+const { Op } = require('sequelize');
+const { Association } = require('sequelize');
+
+const db = require('../database/models')
 
 const productsFilePath = path.join(__dirname, '../data/productDataBase.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -11,20 +15,48 @@ let oferta = products.filter(product => product.category === "oferta")
 const controller = {
     index: (req,res)=> {
 
-        res.render('index', {products: products, visitado:visitado, oferta: oferta})
+        let enOferta = db.Product.findAll({
+            where: {
+                category_id : 1
+            },
+            limit: 4
+        });
+
+        let novedades = db.Product.findAll({
+            where: {
+                category_id : 2
+            },
+            limit: 4
+        })
+
+        Promise
+        .all([enOferta, novedades])
+        .then(([ofertas, novedades]) => {
+            return res.render('index', {ofertas,novedades})})
+        .catch(error => res.send(error))
     },
 
 	search: (req, res) => {
 
-		let loQueBusco = req.query.keywords;
-        let resultados = []
+        let loQueBusco = req.query.keywords;
+    
+        db.Product.findAll({
+            where: {
+                name: {
+                    [Op.like]: '%' + loQueBusco + '%'
+                }
+            }
+        })
+        .then(products => {
+            if (products.length > 0){
+                res.render('results', {product: products, loQueBusco: loQueBusco});
+            } else {
+                res.render('results', {product: [], loQueBusco: loQueBusco});
+            }
+    
+        })
+        .catch(err => res.send(err));
 
-		for (let i = 0; i < products.length; i++) {
-			if (products[i].name.toLowerCase().includes(loQueBusco.toLowerCase())) {
-				resultados.push(products[i]);
-			}
-    }
-    res.render('results', {resultados: resultados, loQueBusco: loQueBusco});
 	},    
 
 

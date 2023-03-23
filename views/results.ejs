@@ -14,17 +14,19 @@
         <section class="productos-destacados">
             <h3>Resultados de la búsqueda: <%= loQueBusco %></h3>
             <div class="productos-destacados">
-                <% for (let i = 0; i < resultados.length; i++) { %>
+                <% for (let i = 0; i < product.length; i++) { %>
         <article class="resultado-busqueda">
-            <a href="/products/detail/<%= resultados[i].id %> ">
-            <img src="/img/products/<%= resultados[i].image %>" alt="<%= resultados[i].name %>" class="product_img">
+            <a href="/products/detail/<%= product[i].id %> ">
+            <img src="/img/products/<%= product[i].image %>" alt="<%= product[i].name %>" class="product_img">
             </a>
             <div class="main-article">
                 <i class="fas fa-truck"></i>
-                <p class="price"><%= resultados[i].price %></p>
-                <p class="discount"><%= resultados[i].discount%>% off</p>
-                <h4 class="description"><%= resultados[i].description%></h4>
-                <button class="ver-mas" onclick="window.location.href='/products/detail/<%= resultados[i].id %> '">Ver Más</button>
+                <p class="name" style="color: white;"><%= product[i].name %></p>
+                <p class="price"><%= product[i].price %></p>
+                <p class="discount"><%= product[i].discount%>% off</p>
+                <h4 class="description"><%= product[i].description%></h4>
+                <button class="ver-mas" onclick="window.location.href='/products/detail/<%= product[i].id %> '">Ver Más</button>
+
             </div>
         </article>
         <% } %>
@@ -32,7 +34,7 @@
     </div>
 </section>
 
-<% if(resultados.length === 0) { %>
+<% if(product.length === 0) { %>
     <h2 class="products-title" style="color: tomato;">No hay productos que coincidan con esa búsqueda</h2>
 <% } %>
 

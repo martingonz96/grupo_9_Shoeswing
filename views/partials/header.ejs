@@ -6,17 +6,18 @@
     <nav class="top-navbar">
         <ul>
             <% if (locals.isLogged) { %>
-                <li>Hola <%= locals.userLogged.nombre %>! </li>
+                <li>Hola <%= locals.userLogged.first_name %>! </li>
                 <li type="none"><a href="/">Inicio</a></li>
                 <li><a href="/profile">Mi cuenta</a></li>
-                <li type="none"><a href="/products/addProduct"> Vender</a></li>
+                <% if (locals.userLogged.user_category_id == 1) { %>
+                    <li type="none"><a href="/products/addProduct">Vender</a></li>
+                <% } %>
                 <li><a href="/logout">Cerrar sesión</a></li>
-              <% } else {%>
-
+            <% } else { %>
                 <li type="none"><a href="/">Inicio</a></li>               
-                <li type="none"><a href="/create"> Registrarse</a></li>
-                <li type="none"><a href="/login"> Inciar Sesión</a></li>
-              <% } %>
+                <li type="none"><a href="/create">Registrarse</a></li>
+                <li type="none"><a href="/login">Inciar Sesión</a></li>
+            <% } %>
         </ul>
         <ul>
             <li type="none" class="search-bar" ><form action="/search" method="GET" class=""><input type="text" placeholder="Buscar..." name="keywords"><button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button></form> </li>

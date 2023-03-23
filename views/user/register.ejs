@@ -13,20 +13,20 @@
 
     <form action="/create" method="POST">
         <div class="registerName">
-            <label>Nombre</label> <input type="text" name="nombre" placeholder="Nombre" required value="<%= locals.oldData ? oldData.nombre : null %> ">
+            <label>Nombre</label> <input type="text" name="first_name" placeholder="Nombre" required value="<%= locals.oldData ? oldData.nombre : null %> ">
         </div>
-        <% if (locals.errors && errors.nombre) { %>
+        <% if (locals.errors && errors.first_name) { %>
             <div class="text-danger">
-              <%= errors.nombre.msg %> 
+              <%= errors.first_name.msg %> 
              </div>
           <% } %>
 
         <div class="registerSurname">
-            <label>Apellido</label> <input type="text" name="apellido" placeholder="Apellido" required value="<%= locals.oldData ? oldData.apellido : null %> ">
+            <label>Apellido</label> <input type="text" name="last_name" placeholder="Apellido" required value="<%= locals.oldData ? oldData.apellido : null %> ">
         </div>
-        <% if (locals.errors && errors.apellido) { %>
+        <% if (locals.errors && errors.last_name) { %>
             <div class="text-danger">
-              <%= errors.apellido.msg %> 
+              <%= errors.last_name.msg %> 
              </div>
           <% } %>
 
@@ -36,24 +36,6 @@
         <% if (locals.errors && errors.email) { %>
             <div class="text-danger">
               <%= errors.email.msg %> 
-             </div>
-          <% } %>
-
-        <div class="registerBirthday">
-            <label>Fecha de nacimiento</label> <input type="date" name="fechaDeNacimiento" value="<%= locals.oldData ? oldData.fechaDeNacimiento : null %> ">
-        </div>
-        <% if (locals.errors && errors.fechaDeNacimiento) { %>
-            <div class="text-danger">
-              <%= errors.fechaDeNacimiento.msg %> 
-             </div>
-          <% } %>
-
-        <div class="registerAddres">
-            <label >Domicilio</label> <input type="text" name="domicilio" placeholder="Domicilio" required value="<%= locals.oldData ? oldData.domicilio : null %> ">
-        </div>
-        <% if (locals.errors && errors.domicilio) { %>
-            <div class="text-danger">
-              <%= errors.domicilio.msg %> 
              </div>
           <% } %>
 

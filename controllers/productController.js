@@ -1,5 +1,8 @@
 const fs = require('fs');
 const path = require('path');
+const { Association } = require('sequelize');
+const { Op } = require('sequelize');
+const db = require('../database/models')
 
 const productsFilePath = path.join(__dirname, '../data/productDataBase.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -11,124 +14,136 @@ const productController = {
         res.render('product/productCart')
     },
 
-    productDetail: (req,res)=> {
-
-        //solucion original
-
-        let id = req.params.id
-
-        let product = products.find(product => product.id == id)
-
-
-        res.render ('product/productDetail', {product})
-    
-    
-    },
+    productDetail: (req, res) => {
+        let id = req.params.id;
+      
+        Promise.all([
+          db.Product.findOne({
+            where: { id: id }
+          }),
+          db.Color.findAll(),
+          db.Size.findAll()
+        ])
+        .then(([product, colors, sizes]) => {
+          if (!product) {
+            res.status(404).send('Product not found');
+          } else {
+            res.render('product/productDetail', { product, colors, sizes });
+          }
+        })
+        .catch(error => res.send(error));
+      }
+      ,
 
     products : (req, res) =>{
 
-        res.render('product/products', {products})
-    },
-
-    addProduct:(req,res)=> {
-    
-        res.render('product/addProduct')
-    },
-
-    store: (req, res) => {
-
-        let img 
-
-		if(req.file != undefined){
-
-			img = req.file.filename
-			
-		}else{
-			
-			img = "/img/default-image.png"
-			
-		}
-
-        productToCreate = {
-			
-			id: products[products.length-1].id +1,
-			...req.body,
-			image: img
-			
-		}
-
-        products.push(productToCreate);
-		
-		fs.writeFileSync(productsFilePath, JSON.stringify(products, null , ""));
-
-		res.redirect("/products");
+        db.Product.findAll(
+        )
+        .then(products =>{
+            //return res.send(relojes);
+            return res.render('product/products', {products})
+        })
+        .catch(error => res.send(error))   
 
     },
+
+    addProduct: async (req, res) => {
+        try {
+            const allCategories = await db.Category.findAll();
+            res.render("product/addProduct", {
+                title: "Add Product",
+                categories: allCategories,
+            });
+        } catch (error) {
+            res.send(error);
+        }
+    },
+
+      store: async (req, res) => {
+        try {
+          let img;
+          if (req.file != undefined) {
+            img = req.file.filename;
+          } else {
+            img = "/img/default-image.png";
+          }
+          const product = await db.Product.create({
+            name: req.body.name,
+            description: req.body.description,
+            price: req.body.price,
+            release_date: req.body.release_date,
+            image: img,
+            discount: req.body.discount,
+            category_id: req.body.category_id,
+            type: req.body.type
+          });
+          res.redirect('/products');
+        } catch (error) {
+          res.send(error);
+        }
+      },
 
     editProduct:(req, res) => {
 
         let id = req.params.id
     
-        let product = products.find(product => {
-            return product.id == id
-         })
-    
-        res.render("product/editProduct", {product})
+        db.Product.findByPk(id, {
+          include: ['Category']})
+        .then(product => {
+          res.render("product/editProduct", {product})
+        })
+        .catch(error => res.send(error))
+        
     },
     
     update: (req, res) =>{
     
-        let id = req.params.id //id que viene por URL
-        let productToEdit = products.find(product => product.id == id)
+        let productId = req.params.id //id que viene por URL
     
-        let img 
-    
-        if(req.file != undefined){
-    
-            img = req.file.filename
-    
-        }else{
-    
-            img = productToEdit.image
-                
+        if (req.file != undefined) {
+          img = req.file.filename;
+        } else {
+          img = null; // use null instead of the default image path
         }
             
-            productToEdit = {
-                id: productToEdit.id,
+            db.Product
+            .update (
+              {
                 name: req.body.name,
                 price: req.body.price,
                 discount: req.body.discount,
                 category: req.body.category,
                 description: req.body.description,
-                image: img
-            }
+                category_id : req.body.category_id,
+                type: req.body.type,
+                ...(img ? { image: img } : {}), // only update image if it's provided
+            },
+            {
+              where: {id: productId}
+            })
+            .then(()=> {
+              return res.redirect('/products'); // change this line
+          })            
+          .catch(error => res.send(error))
     
-        let newProduct = products.map(product => {
-    
-            if(product.id == productToEdit.id){
-    
-                return product = {...productToEdit}
-            }
-    
-            return product;
-        })
-    
-        fs.writeFileSync(productsFilePath, JSON.stringify(newProduct));
-    
-        res.redirect("/products");
     },    
 
     // Delete - Delete one product from DB
-	destroy : (req, res) => {
-		
-		let id = req.params.id
-
-		let productDelete = products.filter(product => product.id != id)
-		
-		fs.writeFileSync(productsFilePath, JSON.stringify(productDelete));
-
-		res.redirect('/products')
-	}
+    destroy: (req, res) => {
+      let productId = req.params.id;
+  
+      db.Product
+        .destroy({
+          where: { id: productId },
+          force: true,
+        })
+        .then(() => {
+          res.redirect('/products');
+        })
+        .catch((error) => {
+          res.send(error);
+        });
+  }
 }
 
 
