@@ -4,8 +4,7 @@ const { Association } = require('sequelize');
 const { Op } = require('sequelize');
 const db = require('../database/models')
 
-const productsFilePath = path.join(__dirname, '../data/productDataBase.json');
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+const {validationResult} = require('express-validator');
 
 
 const productController = {
@@ -48,18 +47,29 @@ const productController = {
     },
 
     addProduct: async (req, res) => {
-        try {
-            const allCategories = await db.Category.findAll();
-            res.render("product/addProduct", {
-                title: "Add Product",
-                categories: allCategories,
-            });
-        } catch (error) {
-            res.send(error);
-        }
+      try {
+        const categories = await db.Category.findAll();
+        res.render("product/addProduct", {
+          title: "Agregar Producto",
+          categories: categories,
+          errors: {},
+        });
+      } catch (error) {
+        res.send(error);
+      }
     },
 
       store: async (req, res) => {
+        const resultValidation = validationResult(req);
+        if (resultValidation.errors.length > 0) {
+          const categories = await db.Category.findAll();
+          return res.render('product/addProduct', {
+              errors: resultValidation.mapped(),
+              oldData: req.body,
+              categories: categories
+          });
+      }
+
         try {
           let img;
           if (req.file != undefined) {
@@ -67,6 +77,7 @@ const productController = {
           } else {
             img = "/img/default-image.png";
           }
+
           const product = await db.Product.create({
             name: req.body.name,
             description: req.body.description,

@@ -16,16 +16,36 @@
             <form class="form-group" action="/products/addProduct" method="post" enctype="multipart/form-data">
 
                 <label class="eti-add-prduct" for="product-name">Nombre del producto:</label><br>
-                <input class="in-add-prduct" type="text" id="product-name" name="name"><br>
+                <input class="in-add-prduct" type="text" id="product-name" name="name">
+                <% if (locals.errors && errors.name) { %>
+                    <div class="text-danger">
+                      <%= errors.name.msg %> 
+                     </div>
+                  <% } %><br>
 
                 <label class="eti-add-prduct" for="product-name">Precio:</label><br>
-                <input class="in-add-prduct" type="text" id="product-name" name="price"><br>
+                <input class="in-add-prduct" type="text" id="product-name" name="price">
+                <% if (locals.errors && errors.price) { %>
+                    <div class="text-danger">
+                      <%= errors.price.msg %> 
+                     </div>
+                  <% } %><br>
 
-                <label class="eti-add-prduct" for="product-name">Descuento:</label><br>
-                <input class="in-add-prduct" type="text" id="product-name" name="discount"><br>
+                <label class="eti-add-prduct" for="product-name">Descuento (opcional):</label><br>
+                <input class="in-add-prduct" type="text" id="product-name" name="discount">
+                <% if (locals.errors && errors.discount) { %>
+                    <div class="text-danger">
+                      <%= errors.discount.msg %> 
+                     </div>
+                  <% } %><br>
 
                 <label class="eti-add-prduct" for="product-description">Descripcion del producto:</label><br>
-                <textarea id="product-description" name="description"></textarea><br>
+                <textarea id="product-description" name="description"></textarea>
+                <% if (locals.errors && errors.description) { %>
+                    <div class="text-danger">
+                      <%= errors.description.msg %>
+                    </div>
+                  <% } %><br>
                 
                 <label class="eti-add-prduct" for="product-photo">Foto del producto:</label><br>
                 <input class="in-add-prduct" type="file" id="product-photo" name="image"><br><br>
@@ -37,6 +57,11 @@
                         <option value="<%= category.id %>"><%= category.category %></option>
                     <% }); %>
                 </select>
+                <% if (locals.errors && errors.category_id) { %>
+                    <div class="text-danger">
+                      <%= errors.category_id.msg %> 
+                    </div>
+                <% } %>
 
                 <label class="eti-add-prduct" for="category">Tipo de producto:</label><br>
                 <select name="type" id="category" class="form-input">
@@ -44,6 +69,11 @@
                         <option value="ropa">Ropa</option>
                         <option value="zapatilla">Zapatilla</option>
                 </select>
+                <% if (locals.errors && errors.type) { %>
+                    <div class="text-danger">
+                      <%= errors.type.msg %> 
+                    </div>
+                  <% } %>
                 
               
                 
@@ -58,4 +88,6 @@
 
 </body>
 
-<script src="https://kit.fontawesome.com/b
+<script src="https://kit.fontawesome.com/bfa858fa89.js" crossorigin="anonymous"></script>
+
+</html>

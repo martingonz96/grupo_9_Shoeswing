@@ -3,6 +3,7 @@ const router = express.Router();
 const controller = require("../controllers/productController");
 const multer = require('multer');
 const path = require('path');
+const validationsProduct = require('../middlewares/productAddMiddleware')
 
 
 //**** multer *////
@@ -31,7 +32,7 @@ router.get("/productCart", controller.productCart);
 router.get("/detail/:id/", controller.productDetail);
 
 router.get("/addProduct", controller.addProduct);
-router.post('/addProduct', upload.single('image'), controller.store);
+router.post('/addProduct', upload.single('image'),validationsProduct, controller.store);
 
 router.get("/editProduct/:id/", controller.editProduct);
 router.put('/editProduct/:id/', upload.single('image'),  controller.update);
