@@ -979,6 +979,17 @@ div.description-black {
     color: #EA2828;
 }
 
+/*estilos para mostrar errores en el front*/
+.is-valid {
+    color: #198754;
+    border-color: #198754;
+  }
+  
+  .is-invalid {
+    color: #842029;
+    border-color: #842029;
+  }
+
 @media (min-width: 420px) {
 
     header {
