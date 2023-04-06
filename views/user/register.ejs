@@ -13,7 +13,7 @@
 
     <form action="/create" method="POST" class="registerForm">
         <div class="registerName">
-            <label>Nombre</label> <input type="text" name="first_name" placeholder="Nombre" required value="<%= locals.oldData ? oldData.nombre : null %> " class="first_name">
+            <label>Nombre</label> <input type="text" name="first_name" placeholder="Nombre" required  class="first_name">
         </div>
         <% if (locals.errors && errors.first_name) { %>
             <div class="text-danger">
@@ -22,7 +22,7 @@
           <% } %>
 
         <div class="registerSurname">
-            <label>Apellido</label> <input type="text" name="last_name" placeholder="Apellido" required value="<%= locals.oldData ? oldData.apellido : null %> " class="last_name">
+            <label>Apellido</label> <input type="text" name="last_name" placeholder="Apellido" required  class="last_name">
         </div>
         <% if (locals.errors && errors.last_name) { %>
             <div class="text-danger">
