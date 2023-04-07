@@ -10,10 +10,13 @@
     <%- include("../partials/header")  %>
     
     <main>
-
-    <form action="/create" method="POST" class="registerForm">
+<section class="registerForm">
+    
+    <ul id="errorsRegister"></ul>
+    
+    <form action="/create" method="POST">
         <div class="registerName">
-            <label>Nombre</label> <input type="text" name="first_name" placeholder="Nombre" required  class="first_name">
+            <label>Nombre</label> <input type="text" name="first_name" placeholder="Nombre" required  id="first_name">
         </div>
         <% if (locals.errors && errors.first_name) { %>
             <div class="text-danger">
@@ -22,7 +25,7 @@
           <% } %>
 
         <div class="registerSurname">
-            <label>Apellido</label> <input type="text" name="last_name" placeholder="Apellido" required  class="last_name">
+            <label>Apellido</label> <input type="text" name="last_name" placeholder="Apellido" required  id="last_name">
         </div>
         <% if (locals.errors && errors.last_name) { %>
             <div class="text-danger">
@@ -31,7 +34,7 @@
           <% } %>
 
         <div class="registerEmail">
-            <label>Email</label> <input type="email" name="email" placeholder="Email" required value="<%= locals.oldData ? oldData.email : null %> " class="inputRegisterEmail">
+            <label>Email</label> <input type="email" name="email" placeholder="Email" required value="<%= locals.oldData ? oldData.email : null %> " id="inputRegisterEmail">
         </div>
         <% if (locals.errors && errors.email) { %>
             <div class="text-danger">
@@ -40,7 +43,7 @@
           <% } %>
 
         <div class="registerPassword">
-            <label>Contraseña</label> <input type="password" name="password" placeholder="Elegí tu contraseña" required minlength="6" class="inputRegisterPassword">
+            <label>Contraseña</label> <input type="password" name="password" placeholder="Elegí tu contraseña" required minlength="6" id="inputRegisterPassword">
         </div>
         <% if (locals.errors && errors.password) { %>
             <div class="text-danger">
@@ -49,7 +52,7 @@
           <% } %>
 
           <div class="registerPassword">
-            <label>Confirmar contraseña</label> <input type="password" name="passwordConfirmation" placeholder="Confirma tu contraseña" required minlength="6" class="inputRegisterConfirmPassword">
+            <label>Confirmar contraseña</label> <input type="password" name="passwordConfirmation" placeholder="Confirma tu contraseña" required minlength="6" id="inputRegisterConfirmPassword">
         </div>
         <% if (locals.errors && errors.passwordConfirmation) { %>
             <div class="text-danger">
@@ -64,7 +67,7 @@
         </div>
 
     </form>
-
+</section>
     </main>
 
     <%- include ("../partials/footer") %> 

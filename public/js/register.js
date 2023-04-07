@@ -1,10 +1,10 @@
 window.onload  = function() {
     let formulario = document.querySelector('.registerForm');
-    let inputFirstName = document.querySelector('.first_name');
-    let inputLastName = document.querySelector('.last_name');
-    let inputEmail = document.querySelector('.inputRegisterEmail');
-    let inputPassword = document.querySelector('.inputRegisterPassword');
-    let inputConfirmPassword = document.querySelector('.inputRegisterConfirmPassword');
+    let inputFirstName = document.querySelector('#first_name');
+    let inputLastName = document.querySelector('#last_name');
+    let inputEmail = document.querySelector('#inputRegisterEmail');
+    let inputPassword = document.querySelector('#inputRegisterPassword');
+    let inputConfirmPassword = document.querySelector('#inputRegisterConfirmPassword');
 
     inputFirstName.focus();
 
@@ -53,6 +53,8 @@ window.onload  = function() {
         }
     })
 
+    console.log('el codigo se ejecuto hasta aca');
+    
     formulario.addEventListener('submit', (e) => {
         let errors = [];
 
@@ -62,7 +64,7 @@ window.onload  = function() {
         } else {
             inputFirstName.classList.remove('is-invalid');
         };
-
+        
         if (inputLastName.value == '') {
             errors.push('Debe introducir un apellido')
             inputLastName.classList.add('is-invalid');
@@ -77,7 +79,7 @@ window.onload  = function() {
             inputEmail.classList.remove('is-invalid');
         };
 
-        if (inputPassword.value < 6) {
+        if (inputPassword.value.length < 6) {
             errors.push('La contraseña debe tener 6 caracteres o más')
             inputPassword.classList.add('is-invalid');
         } else {
@@ -87,9 +89,12 @@ window.onload  = function() {
         if (errors.length > 0) {
             e.preventDefault();
 
-            let ulErrors = document.querySelector('errorsRegister');
+            let ulErrors = document.querySelector('#errorsRegister');
             ulErrors.classList.add('alert-warning');
+            ulErrors.innerHTML = '';
+
             console.log(errors);
+            
             for (let i = 0; i < errors.length; i++) {
                 ulErrors.innerHTML += '<li>' + errors[i] + '</li>';
             }
