@@ -990,6 +990,22 @@ div.description-black {
     border-color: #842029;
   }
 
+  .is-invalid ::placeholder {
+    color: #842029;
+  }
+
+  #errorsRegister li {
+    margin-bottom: 5px;
+  }
+
+  ul#errorsRegister li {
+    display: block;
+  }
+
+  ul#errorsRegister{
+    display: block;
+  }
+
   .alert-warning{
     color:#842029;
     background-color: #F8D7DA;

@@ -9,7 +9,7 @@ window.onload  = function() {
     inputFirstName.focus();
 
     inputFirstName.addEventListener('blur', (e) => {
-        if (inputFirstName.value == '') {
+        if (e.target.value == '') {
             inputFirstName.classList.add('is-invalid');
         } else {
             inputFirstName.classList.remove('is-invalid');
@@ -18,7 +18,7 @@ window.onload  = function() {
     })
 
     inputLastName.addEventListener('blur', (e) => {
-        if (inputLastName.value == '') { 
+        if (e.target.value == '') { 
             inputLastName.classList.add('is-invalid');
         } else {
             inputLastName.classList.remove('is-invalid');
@@ -27,7 +27,7 @@ window.onload  = function() {
     })
 
     inputEmail.addEventListener('blur', (e) => {
-        if (inputEmail.value == '') {
+        if (e.target.value == '') {
             inputEmail.classList.add('is-invalid');
         } else {
             inputEmail.classList.remove('is-invalid');
@@ -36,7 +36,7 @@ window.onload  = function() {
     })
 
     inputPassword.addEventListener('blur', (e) => {
-        if (inputPassword.value.length < 6) {
+        if (e.target.value.length < 6) {
             inputPassword.classList.add('is-invalid');
         } else {
             inputPassword.classList.remove('is-invalid');
@@ -45,7 +45,7 @@ window.onload  = function() {
     })
 
     inputConfirmPassword.addEventListener('blur', (e) => {
-        if (inputConfirmPassword.value != inputPassword.value) {
+        if (e.target.value != inputPassword.value) {
             inputConfirmPassword.classList.add('is-invalid');
         } else {
             inputConfirmPassword.classList.remove('is-invalid');
