@@ -1,9 +1,9 @@
 window.onload = function() {
     let formulario = document.querySelector('.form-group');
-    let inputName = document.querySelector('#inputEditName');
-    let inputPrice = document.querySelector('#inputEditPrice');
-    let inputDiscount = document.querySelector('#inputEditDiscount');
-    let inputDescription = document.querySelector('#inputEditDescription');
+    let inputName = document.querySelector('#inputAddName');
+    let inputPrice = document.querySelector('#inputAddPrice');
+    let inputDescription = document.querySelector('#product-description');
+    let selectCategory = document.querySelector('#category');
 
     inputName.focus();
 
@@ -25,21 +25,21 @@ window.onload = function() {
         }
     })
 
-    inputDiscount.addEventListener('blur', (e) => {
-        if (e.target.value == '') {
-            inputDiscount.classList.add('is-invalid');
-        } else {
-            inputDiscount.classList.remove('is-invalid');
-            inputDiscount.classList.add('is-valid');
-        }
-    })
-
     inputDescription.addEventListener('blur', (e) => {
         if (e.target.value == '') {
             inputDescription.classList.add('is-invalid');
         } else {
             inputDescription.classList.remove('is-invalid');
             inputDescription.classList.add('is-valid');
+        }
+    })
+
+    selectCategory.addEventListener('blur', (e) => {
+        if (e.target.value == '') {
+            selectCategory.classList.add('is-invalid');
+        } else {
+            selectCategory.classList.remove('is-invalid');
+            selectCategory.classList.add('is-valid');
         }
     })
 
@@ -60,13 +60,6 @@ window.onload = function() {
             inputPrice.classList.remove('is-invalid');
         };
 
-        if (inputDiscount.value == '') {
-            errors.push('Debe completar el campo de Descuento');
-            inputDiscount.classList.add('is-invalid');
-        } else {
-            inputDiscount.classList.remove('is-invalid');
-        };
-
         if (inputDescription.value == '') {
             errors.push('Debe completar el campo de Descripción');
             inputDescription.classList.add('is-invalid');
@@ -74,21 +67,28 @@ window.onload = function() {
             inputDescription.classList.remove('is-invalid');
         };
 
+        if (selectCategory.value == '') {
+            errors.push('Debe sellecionar una categoría');
+            selectCategory.classList.add('is-invalid');
+        } else {
+            selectCategory.classList.remove('is-invalid');
+        };
+
         if (errors.length > 0) {
             e.preventDefault();
-            
-            let ulErrors = document.querySelector('#errorsEditProduct');
+
+            let ulErrors = document.querySelector('#errorsAddProduct');
             ulErrors.classList.add('alert-warning');
             ulErrors.innerHTML = '';
-            
+
             console.log(errors);
 
             for (let i = 0; i < errors.length; i++) {
                 ulErrors.innerHTML += '<li>' + errors[i] + '</li>';
-                }
-            } else {
+            }
+        } else {
             Swal.fire(
-                'Producto editado correctamente'
+                'Producto creado correctamente'
             )
         }
     })

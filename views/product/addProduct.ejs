@@ -15,8 +15,10 @@
 
             <form class="form-group" action="/products/addProduct" method="post" enctype="multipart/form-data">
 
+              <ul id="errorsAddProduct"></ul>
+
                 <label class="eti-add-prduct" for="product-name">Nombre del producto:</label><br>
-                <input class="in-add-prduct" type="text" id="product-name" name="name">
+                <input class="in-add-prduct" type="text" id="inputAddName" name="name">
                 <% if (locals.errors && errors.name) { %>
                     <div class="text-danger">
                       <%= errors.name.msg %> 
@@ -24,7 +26,7 @@
                   <% } %><br>
 
                 <label class="eti-add-prduct" for="product-name">Precio:</label><br>
-                <input class="in-add-prduct" type="text" id="product-name" name="price">
+                <input class="in-add-prduct" type="text" id="inputAddPrice" name="price">
                 <% if (locals.errors && errors.price) { %>
                     <div class="text-danger">
                       <%= errors.price.msg %> 
@@ -88,6 +90,8 @@
 
 </body>
 
-<script src="https://kit.fontawesome.com/bfa858fa89.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://kit.fontawesome.com/bfa858fa89.js" crossorigin="anonymous"></script>
+  <script src="/js/addProduct.js"></script>
 
 </html>
