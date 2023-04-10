@@ -15,17 +15,19 @@
 
             <form class="form-group" action="/products/editProduct/<%= product.id %>?_method=PUT" method="post" enctype="multipart/form-data">
                 
+                <ul id="errorsEditProduct"></ul>
+
                 <label class="eti-add-prduct" for="product-name">Nombre del producto:</label><br>
-                <input class="in-add-prduct" type="text" id="product-name" name="name" value="<%= product.name %>"><br>
+                <input class="in-add-prduct" type="text" id="inputEditName" name="name" value="<%= product.name %>"><br>
 
                 <label class="eti-add-prduct" for="product-name">Precio:</label><br>
-                <input class="in-add-prduct" type="text" id="product-name" name="price" value="<%= product.price %>"><br>
+                <input class="in-add-prduct" type="text" id="inputEditPrice" name="price" value="<%= product.price %>"><br>
 
                 <label class="eti-add-prduct" for="product-name">Descuento:</label><br>
-                <input class="in-add-prduct" type="text" id="product-name" name="discount" value="<%= product.discount %>"><br>
+                <input class="in-add-prduct" type="text" id="inputEditDiscount" name="discount" value="<%= product.discount %>"><br>
 
                 <label class="eti-add-prduct" for="product-description">Descripcion del producto:</label><br>
-                <textarea id="product-description" name="description"><%= product.description %></textarea><br>
+                <textarea id="inputEditDescription" name="description"><%= product.description %></textarea><br>
 
                 <label class="eti-add-prduct" for="product-photo">Foto del producto:</label><br>
                 <input class="in-add-prduct" type="file" id="product-photo" name="image"><br><br>
@@ -58,6 +60,8 @@
 
 </body>
 
-<script src="https://kit.fontawesome.com/bfa858fa89.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://kit.fontawesome.com/bfa858fa89.js" crossorigin="anonymous"></script>
+    <script src="/js/editProduct.js"></script>
 
 </html>
