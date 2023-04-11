@@ -14,9 +14,9 @@
             <h3 class="titulo-detalle"><%= product.name %></h3>
                 
             <div class="foto-y-precio">
-                <img src=  '/img/products/<%= product.image %>'alt="<%= product.description %>" class="detail-img">
+                <img src=  '/img/products/<%= product.image %>'alt="<%= product.name %>" class="detail-img">
                 <div class="precio-detallado">
-                    <h4 class="description-black"><%= product.description %></h4>
+                    <!-- <h4 class="description-black"><%= product.description %></h4> -->
                     <p class="price">$<%= product.price %></p>
                     <p class="discount"><%= product.discount %> % off</p>
                     <p class="texto-talles">Elegí tu talle</p>
@@ -61,17 +61,7 @@
             
             <div class="detalle-ampliado">
                 <h4>Detalles del Producto</h4>
-                <p>Ponete estos shorts de fútbol para jóvenes de Argentina con el resto del uniforme alternativo para conseguir el look perfecto para la cancha. Los tonos violeta representan la igualdad de género y la búsqueda de un mundo más justo. Su tejido ligero con tecnología de absorción AEROREADY se encarga de brindar comodidad dentro y fuera de la cancha.
-
-                Este producto, hecho con materiales 100 % reciclados, representa solo una de las soluciones de adidas para ayudar a acabar con los residuos plásticos.</p>
-                <ul class="caracteristicas-productos">
-                    <li>Ajuste clásico con tiro medio.</li>
-                    <li>Cintura elástica con cordón regulable.</li>
-                    <li>Tejido entrelazado 100 % poliéster reciclado.</li>
-                    <li>Tecnología de absorción AEROREADY.</li>
-                    <li>Escudo de la Selección Argentina tejido.</li>
-                    <li>Color del artículo: Legacy Indigo / Purple Rush. </li>   
-                </ul>
+                <p><%= product.description %></p>
             </div>
         </article>
 
