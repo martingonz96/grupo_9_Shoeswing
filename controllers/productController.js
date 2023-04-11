@@ -75,7 +75,7 @@ const productController = {
           if (req.file != undefined) {
             img = req.file.filename;
           } else {
-            img = "/img/default-image.png";
+            img = "default-image.png";
           }
 
           const product = await db.Product.create({
