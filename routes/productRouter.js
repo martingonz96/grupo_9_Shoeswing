@@ -39,6 +39,10 @@ router.put('/editProduct/:id/', upload.single('image'),  controller.update);
 
 router.get("/", controller.products);
 
+router.get("/zapatillas", controller.productsZapatillas);
+
+router.get("/ropa", controller.productsRopa);
+
 /*** DELETE ONE PRODUCT***/ 
 router.delete('/delete/:id', controller.destroy); 
 

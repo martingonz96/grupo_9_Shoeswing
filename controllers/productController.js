@@ -46,6 +46,36 @@ const productController = {
 
     },
 
+    productsZapatillas : (req, res) => {
+       
+      db.Product.findAll(
+        {
+          where: {type:"zapatilla"}
+        }
+      )
+      .then(products =>{
+        //return res.send(relojes);
+        return res.render('product/products-zapatillas', {products})
+    })
+    .catch(error => res.send(error))
+
+    },
+
+    productsRopa : (req, res) => {
+       
+      db.Product.findAll(
+        {
+          where: {type:"ropa"}
+        }
+      )
+      .then(products =>{
+        //return res.send(relojes);
+        return res.render('product/products-ropa', {products})
+    })
+    .catch(error => res.send(error))
+
+    },
+
     addProduct: async (req, res) => {
       try {
         const categories = await db.Category.findAll();
