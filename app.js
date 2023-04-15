@@ -30,6 +30,9 @@ const usersRoutes = require ('./routes/userRoutes');
 const indexRouter = require('./routes/indexRoutes');
 
 
+const apiProductsRouter = require('./routes/api/products')
+
+
 //configuradion de template engine
 app.set("view engine", "ejs");
 app.set('views', './views');
@@ -39,5 +42,8 @@ app.use(mainRouter);
 app.use('/products', productsRouter);
 app.use(usersRoutes);
 app.use(indexRouter)
+
+//APIS
+app.use('/api/products',apiProductsRouter);
 
 app.listen(3000, (console.log("listening on port 3000")));
