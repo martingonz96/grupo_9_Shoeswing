@@ -7,3 +7,5 @@ Durante la semana, escribimos casi todos los días para saber avances del trabaj
 En el sprint 4 en particular, el equipo funcionó muy bien como un todo. Federico estuvo 10 días de vacaciones y después le costó ponerse al día con los contenidos, por lo que Martín y Juan Pablo se pusieron la 10 y trabajaron extra para llegar con todos los requisitos del sprint. El ritmo de la cursada es exigente y hay que meterle mucha energía durante la semana para abarcar todos los contenidos.
 
 Nos propusimos utilizar más el Trello en este quinto sprint que arranca hoy, ya que sabemos que es una herramienta con mucho potencial que no estamos sabiendo aprovechar. Whatsapp es muy cómodo para el día a día, aunque no permite registro de datos ni creación de tarjetas.
+
+Vinieron después los sprints 6 y 7, en donde se agregó mucho contenido y tuvimos todo el trabajo de pasar a utilizar bases de datos. Fuimos aprendiendo sobre la marcha, con muchas trabas, idas y vueltas. EL proyecto ya está muy completo ahora.
