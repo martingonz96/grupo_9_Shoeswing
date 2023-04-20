@@ -25,7 +25,7 @@
                             <% sizes.slice(0, 5).forEach(size => { %>
                                 <li><a href=""></a><%= size.size %></li>
                             <% }) %>
-                        <% } else { %>
+                        <% } else if(product.type === "zapatilla") { %>
                             <% sizes.slice(5, 12).forEach(size => { %>
                                 <li><a href=""></a><%= size.size %></li>
                             <% }) %>

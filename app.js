@@ -31,6 +31,7 @@ const indexRouter = require('./routes/indexRoutes');
 
 
 const apiProductsRouter = require('./routes/api/products')
+const apiUsersRouter = require('./routes/api/users')
 
 
 //configuradion de template engine
@@ -45,5 +46,6 @@ app.use(indexRouter)
 
 //APIS
 app.use('/api/products',apiProductsRouter);
+app.use('/api/users', apiUsersRouter)
 
 app.listen(3000, (console.log("listening on port 3000")));
