@@ -114,17 +114,25 @@
     width: 100%;
     padding: 20px 0;
     z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, top 0.3s ease-in-out;
   }
+
 
   .navbar-mobile.active {
     display: block;
     left: 0px;
     top: 130px;
-}
+    opacity: 1;
+  }
 
   .navbar-mobile li {
     padding: 10px 20px;
     border-bottom: 1px solid #ccc;
+    transition: all 0.3s ease-in-out;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
   }
   
   .navbar-mobile li:last-child {
@@ -520,6 +528,35 @@
    }
    
    /* formulario agregar producto y editar producto */
+
+
+   /* Perfil */
+
+   .contenedor-perfil {
+    margin-top: 1rem;
+    margin-left: 1rem;
+   }   
+
+   .info-general-perfil{
+    margin-top: 1rem;
+   margin-left: 1rem;
+   } 
+
+   .contenedor-nombre, .contenedor-email, .contenedor-rol {
+    font-size: 1rem;
+   }
+
+   .main-perfil {
+    background-color: white;
+    margin: 1rem;
+    color: black;
+    border-radius: 15px;
+   }
+
+   .contenedor-perfil label {
+    color: #FFC300;
+   }
+
  
  /* footer */
  

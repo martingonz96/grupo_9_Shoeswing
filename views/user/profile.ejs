@@ -6,9 +6,25 @@
 </head>
 <body>
     <%- include("../partials/header")  %>
-    <h1>Hola <%= user.first_name %> <%= user.last_name %></h1><br>
-    <h2><%= user.email %> </h2><br>
-
+    <main class="main-perfil">
+        <div class="info-general-perfil">
+            <h1>Mi Cuenta</h1>
+            <p>Aqui se encuentra la información general</p>
+        </div>
+        <div class="contenedor-perfil">
+            <label for="">Nombre y apellido:</label>
+            <h3 class="contenedor-nombre"><%= user.first_name %> <%= user.last_name %></h3><br>
+            <label for="">Email:</label>
+            <h3 class="contenedor-email"><%= user.email %> </h3><br>
+            <label for="">Rol:</label>
+            <% if (user.user_category_id == 1) { %>
+                <h3 class="contenedor-rol">Admin</h3><br>
+                <% } else { %>
+                <h3 class="contenedor-rol">Cliente</h3><br>
+            <% } %>
+        </div>
+    </main>
+    
     <%- include ("../partials/footer") %> 
 </body>
 
