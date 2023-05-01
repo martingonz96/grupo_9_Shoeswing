@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import ProductDest from "./ProductDest";
+import ProductCard from "./ProductCard";
 
 function Products() {
 
@@ -23,7 +23,7 @@ function Products() {
 
     return (
         <>
-            <ProductDest {...moreExpensive} />
+            <ProductCard {...moreExpensive} />
         </>
     )
 }

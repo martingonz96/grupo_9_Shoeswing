@@ -1,6 +1,6 @@
 import React from "react";
 
-function ProductDest(props) {
+function ProductCard(props) {
     return (
         <>
             <article>
@@ -15,4 +15,4 @@ function ProductDest(props) {
         </>
     )
 }
-export default ProductDest;
+export default ProductCard;

@@ -1,11 +1,19 @@
 import React from "react";
 import Products from "./Products";
 import Users from "./Users";
+import { FaHome } from 'react-icons/fa';
+import { FaRegIdCard } from 'react-icons/fa';
+import { ImEnter } from 'react-icons/im';
 
 function Main() {
     return (
         <>
             <main>
+                <ul className="navBar">
+                    <li><a href="">Inicio <FaHome /></a></li>
+                    <li><a href="">Registrarse <FaRegIdCard /></a></li>
+                    <li><a href="">Iniciar Sesión <ImEnter /></a></li>
+                </ul>
                 <div className="category">
                     <a className="products" href="">
                         <h2>Productos</h2>
