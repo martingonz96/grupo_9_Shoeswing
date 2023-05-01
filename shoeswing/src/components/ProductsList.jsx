@@ -1,10 +1,13 @@
 import React from "react";
-import ProductCard from "./ProductCard";
 
-function ProductsList() {
+function ProductsList(props) {
     return (
         <>
-            <h1>Listado de Productos</h1>
+            <tr>
+                <td>{props.name}</td>
+                <td>{props.price}</td>
+                <td>{<img style={{width: 4+'rem'}} src={`http://localhost:3001/img/products/${props.img}`}/>}</td>
+            </tr>
         </>
     )
 }

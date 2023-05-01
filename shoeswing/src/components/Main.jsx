@@ -4,25 +4,26 @@ import Users from "./Users";
 import { FaHome } from 'react-icons/fa';
 import { FaRegIdCard } from 'react-icons/fa';
 import { ImEnter } from 'react-icons/im';
+import { Link } from "react-router-dom";
 
 function Main() {
     return (
         <>
             <main>
                 <ul className="navBar">
-                    <li><a href="">Inicio <FaHome /></a></li>
-                    <li><a href="">Registrarse <FaRegIdCard /></a></li>
-                    <li><a href="">Iniciar Sesión <ImEnter /></a></li>
+                    <li><Link to='/'>Inicio <FaHome /></Link></li>
+                    <li><Link to=''>Registrarse <FaRegIdCard /></Link></li>
+                    <li><Link to=''>Iniciar Sesión <ImEnter /></Link></li>
                 </ul>
                 <div className="category">
-                    <a className="products" href="">
+                    <Link to='/products ' className="products"> 
                         <h2>Productos</h2>
-                        <img src="../../public/img/botinesFondo (1).jpg" alt="" />
-                    </a>
-                    <a className="users" href="">
+                        <img src="/img/botinesFondo (1).jpg" alt="" />
+                    </Link>
+                    <Link className="users" to='/users'>
                         <h2>Usuarios</h2>
-                        <img src="../../public/img/user-gd3f681f92_640.png" alt="" />
-                    </a>
+                        <img src="/img/user-gd3f681f92_640.png" alt="" />
+                    </Link>
                 </div>
 
                 <div className="produtsUsers">

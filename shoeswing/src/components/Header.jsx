@@ -6,7 +6,7 @@ function Header() {
         <>
             <header>
                 <div className="logo">
-                    <img src='../../public/img/Logo shoes.png' alt="Logo" />
+                    <img src='/img/Logo shoes.png' alt="Logo" />
                     <h1>Shoeswing</h1>
                 </div>
                 <div className="search-bar">

@@ -1,10 +1,9 @@
 import React from "react";
-import '../../public/css/styles.css';
 import Header from "./Header";
 import Main from "./Main";
 import Footer from "./Footer";
 
-function App() {
+function Home() {
     return (
         <>
             <Header />
@@ -13,4 +12,4 @@ function App() {
         </>
     )
 }
-export default App;
+export default Home;
