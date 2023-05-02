@@ -1,8 +1,13 @@
 import React, { useEffect, useState } from "react";
 import Header from "./Header";
+import Footer from "./Footer";
 import ProductsList from "./ProductsList";
-// import '../assets/css/productsList.css';
 import Table from 'react-bootstrap/Table';
+import { Link } from "react-router-dom";
+import { FaHome } from 'react-icons/fa';
+import { FaRegIdCard } from 'react-icons/fa';
+import { ImEnter } from 'react-icons/im';
+import { HiUsers } from 'react-icons/Hi';
 
 function ProductsTable() {
 
@@ -17,8 +22,14 @@ function ProductsTable() {
     return (
         <>
             <Header />
-            <h2>Listado de Productos</h2>
             <div className="tableProduct">
+                <ul className="navBar">
+                    <li><Link to='/'>Inicio <FaHome /></Link></li>
+                    <li><Link to='/users'>Usuarios <HiUsers /></Link></li>
+                    <li><Link to=''>Registrarse <FaRegIdCard /></Link></li>
+                    <li><Link to=''>Iniciar Sesión <ImEnter /></Link></li>
+                </ul>
+                <h2>Listado de Productos</h2>
                 <Table striped bordered hover>
                     <thead>
                         <tr>
@@ -36,6 +47,7 @@ function ProductsTable() {
                     </tbody>
                 </Table>
             </div>
+            <Footer />
         </>
     )
 }
