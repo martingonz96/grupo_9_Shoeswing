@@ -9,15 +9,21 @@ import { FaRegIdCard } from 'react-icons/fa';
 import { ImEnter } from 'react-icons/im';
 import { HiUsers } from 'react-icons/Hi';
 import { ImMenu } from 'react-icons/im';
+import Box from '@mui/material/Box';
+import LinearProgress from '@mui/material/LinearProgress';
 
 function ProductsTable() {
 
     const [products, setProducts] = useState([]);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         fetch('http://localhost:3000/api/products')
             .then(res => res.json())
-            .then(data => setProducts(data.data))
+            .then(data => {
+                setProducts(data.data)
+                setLoading(false);
+            })
     }, [])
 
     return (
@@ -42,9 +48,14 @@ function ProductsTable() {
                     </thead>
                     <tbody>
                         {
-                            products.map((product, index) => {
-                                return <ProductsList {...product} key={product + index} />;
-                            })
+                            loading ?
+                                <Box sx={{ width: '100%' }}>
+                                    <LinearProgress />
+                                </Box>
+                                :
+                                products.map((product, index) => {
+                                    return <ProductsList {...product} key={product + index} />;
+                                })
                         }
                     </tbody>
                 </Table>

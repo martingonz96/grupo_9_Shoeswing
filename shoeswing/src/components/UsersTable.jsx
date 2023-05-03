@@ -9,17 +9,20 @@ import { FaRegIdCard } from "react-icons/fa";
 import { ImEnter } from 'react-icons/im';
 import { GiClothes } from "react-icons/Gi";
 import { ImMenu } from 'react-icons/im';
+import Box from '@mui/material/Box';
+import LinearProgress from '@mui/material/LinearProgress';
 
 function UsersTable() {
 
     const [users, setUsers] = useState([]);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         fetch('http://localhost:3000/api/users')
             .then(res => res.json())
             .then(data => {
-                console.log(data.data);
-                setUsers(data.data)
+                setUsers(data.data);
+                setLoading(false);
             })
     }, [])
 
@@ -46,9 +49,14 @@ function UsersTable() {
                     </thead>
                     <tbody>
                         {
-                            users.map((user, index) => {
-                                return <UsersListTable {...user} key={user + index} />;
-                            })
+                            loading ?
+                                <Box sx={{ width: '100%' }}>
+                                    <LinearProgress />
+                                </Box>
+                                :
+                                users.map((user, index) => {
+                                    return <UsersListTable {...user} key={user + index} />;
+                                })
                         }
                     </tbody>
                 </Table>
