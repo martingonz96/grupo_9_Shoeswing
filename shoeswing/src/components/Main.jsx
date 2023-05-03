@@ -5,15 +5,17 @@ import { FaHome } from 'react-icons/fa';
 import { FaRegIdCard } from 'react-icons/fa';
 import { ImEnter } from 'react-icons/im';
 import { Link } from "react-router-dom";
+import { ImMenu } from 'react-icons/im';
 
 function Main() {
     return (
         <>
             <main>
                 <ul className="navBar">
-                    <li><Link to='/'>Inicio <FaHome /></Link></li>
-                    <li><Link to=''>Registrarse <FaRegIdCard /></Link></li>
-                    <li><Link to=''>Iniciar Sesión <ImEnter /></Link></li>
+                    <li className="enlaces"><Link to='/'>Inicio <FaHome /></Link></li>
+                    <li className="enlaces"><Link to=''>Registrarse <FaRegIdCard /></Link></li>
+                    <li className="enlaces"><Link to=''>Iniciar Sesión <ImEnter /></Link></li>
+                    <li className="burgerMenu"><Link to=''><ImMenu /></Link></li>
                 </ul>
                 <div className="category">
                     <Link to='/products ' className="products"> 
