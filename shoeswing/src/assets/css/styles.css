@@ -269,7 +269,6 @@ footer {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-
 }
 
 .tableProduct ul {
@@ -293,4 +292,42 @@ footer {
     border-radius: 10px;
     padding: 5px;
     margin-bottom: 20px;
+}
+
+.tableProduct #imgTable {
+    text-align: center;
+}
+
+.usersTable {
+    background-color: #e5e5e5;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.usersTable ul {
+    width: 100%;
+}
+
+.usersTable h2 {
+    width: 100%;
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #003566;
+    justify-content: center;
+}
+
+.usersTable table {
+    width: 85%;
+    color: whitesmoke;
+    background-color: #003566;
+    border: 2px solid whitesmoke;
+    border-radius: 10px;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+.usersTable td {
+    text-align: center;
 }

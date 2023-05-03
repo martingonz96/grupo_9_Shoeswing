@@ -6,7 +6,7 @@ function ProductsList(props) {
             <tr>
                 <td>{props.name}</td>
                 <td>{props.price}</td>
-                <td>{<img style={{width: 4+'rem'}} src={`http://localhost:3000/img/products/${props.image}`}/>}</td>
+                <td id="imgTable">{<img style={{width: 4+'rem'}} src={`http://localhost:3000/img/products/${props.image}`}/>}</td>
             </tr>
         </>
     )
